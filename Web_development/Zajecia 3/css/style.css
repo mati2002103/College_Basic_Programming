@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Kay+Pho+Du&display=swap');
+
+/* SELEKTORY GLOBALNE */
+*{
+	transition:400ms;
+	scroll-behavior: smooth;
+	
+
+}
+html{
+	font-family: 'Kay Pho Du', serif;
+		font-size:10px;
+}
+body{}
+
+/* NAWIGACJA */
+nav{
+	background-color: #333;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding:1rem 0;
+	position: fixed;
+	width: 100%;
+
+}
+nav ol{ 
+	display: flex;
+	gap:20px;
+}
+nav ol li{}
+nav ol li a{
+	color:#aba8a8;
+	padding: 10px 3vw;/*vw-viewport with*/
+	display:block;
+	text-decoration: none;
+}
+nav ol li a:hover{
+	background-color: #ddd;
+	color:#333;
+}
+
+
+/* WSZYSTKIE SEKCJE */
+section{
+	min-height: 95vh;/*vh = viewport height = % wysokości okna przeglądarki*/
+	/*min-height = wysokość ma tyle, ale może być wyższa w zależności od zawartości*/
+	
+	/*flex container*/
+	display: flex;/*uruchamiamy flexbox*/
+	align-items: center;/*wyśrodkowanie na wys.*/
+	justify-content: center;
+	scroll-margin-top:56px;
+}
+/* selektor CLASS ma prefix '.' */
+.zawartosc{
+	/*flex items*/
+	/*background-color: orange;*/
+	max-width: 1000px;
+}
+
+/* POSZCZEGÓLNE SEKCJE */
+/* selektor ID ma prefix '#' */
+#pierwsza{background-color: #ededed;}
+#pierwsza .zawartosc{
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items: center;
+}
+#logo{
+	font-size:19rem;
+	font-weight: 100;
+	background-color: #fff;
+	color:#333;
+	height: 20rem;
+	width: 20rem;
+	border-radius: 50%;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+
+}
+#pierwsza h1{}
+#pierwsza a{}
+#pierwsza a:hover{}
+
+#druga{
+	background-color: #666;
+	padding:4vh 3vw;
+}
+#druga .zawartosc{
+	/*flex container*/
+	display: flex;
+	gap: 40px;
+}
+#druga article{
+	/*flex items*/
+	flex: 1;
+}
+#druga h2{}
+#druga p{}
+
+#trzecia{}
+#trzecia .zawartosc{}
+#trzecia h3{}
+
+#czwarta{
+	background-color: #999;
+}
+#czwarta .zawartosc{}
+
+/* STOPKA */
+#stopka{
+	background-color: black;
+	color: white;
+}
+
+
+
+
