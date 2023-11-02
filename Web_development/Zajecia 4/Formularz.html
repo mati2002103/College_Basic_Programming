@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularze</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');         *{
+            
+            transition: 1s;
+            /*border:1px dashed red; to są ramki*/
+            box-sizing:border-box;
+            margin:0;
+    
+        }
+        html{
+            font-family: 'Open Sans', sans-serif;        }
+        body{
+            font-size: 1.6rem;
+            background:
+            url("https://wallpapersmug.com/download/1920x1080/064004/abstract-triangle-eges-glow-dark.jpg")
+            no-repeat center fixed;
+            background-size: cover;
+            /*https://css.glass/*/
+            display:flex;
+            justify-content: center;
+            align-items: center;/*nie działa w body trzeba dodać  min height*/
+            min-height:100vh;         
+            margin:0;   
+        }
+        input, textarea,select{
+            font-family: inherit;
+            font-size:100%;
+    
+            
+        }
+        form{/* From https://css.glass */
+        background: rgba(255, 255, 255, 0.11);
+        border-radius: 2rem;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2.1px);
+        -webkit-backdrop-filter: blur(2.1px);
+        border: 1px solid rgba(22, 17, 17, 0.56);
+        color:white;
+        max-width: 550px;
+        padding:2rem;
+        
+        }
+        form h2{
+            text-align: center;
+            font-weight: 100;
+            font-size:3rem;
+        }
+        
+        form main{
+            margin:2rem 0;
+        }
+        form main label{
+            display: block;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size:1.1rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            color: #e329d4;;
+        }
+        
+        form main input{
+            display:block;
+            margin-bottom: 2rem;
+            width:100%;
+            background: none;
+            border-bottom: 1px solid #666;
+            padding: .6rem 0;
+            color:white;
+        }
+        
+        form main input:focus{
+            outline: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform:scale(1.05);
+            border-radius: 1rem;
+        }
+        ::placeholder{
+            color:whitesmoke;
+            font-weight: 200;
+        }
+        form main input[type=color]{
+            height:5rem;
+            border:0;
+        }
+        form main select{
+            width: 100%;
+            margin-bottom: 2rem;;
+        }
+        form main textarea{
+            width: 100%;
+            resize:vertical;
+        }
+        form main textarea:focus{
+            outline: 0;
+        }
+
+        form footer{
+            background-color: rgba(79, 37, 99, 0.766);
+            color:rgb(170, 153, 153);
+        }
+        form footer input{
+            display:inline-block;
+            width:auto;
+        }
+        form footer label{
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        form footer input[type=reset],form footer input[type=submit]{
+            background-color: aqua;
+            color:blueviolet;
+            border:0;
+            padding: 1rem 2rem;
+            margin-right: 2rem;
+            margin-top: 2rem;
+            text-transform: uppercase;
+            font-weight: 900;
+
+        }
+        form footer input[type=submit]:hover{
+            background-color: green;
+        }
+        form footer input[type=reset]:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Wypełnij formularz</h2>
+
+        <main>
+            <label>Imię:</label>
+            <input type="text"
+             placeholder="Wpisz imię...."
+             required>
+
+            <label>E-mail:</label>
+            <input type="email"
+            placeholder="Wpisz e-mail...."
+            required
+            value="@gmail.com">
+
+            <label>Hasło:</label>
+            <input type="password"
+            placeholder="Wpisz hasło....">
+
+            <label>Zakres:</label>
+            <input type="range">
+
+            <label>Kolor:</label>
+            <input type="color">
+
+            <label>Data::</label>
+            <input type="date"
+            placeholder="Wpisz imię....">
+
+            <labale>Wybierz</labale>
+            <select>
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JS</option>
+            </select>
+            <label>Wpisz Wiaodomość</label>
+            <textarea placeholder="minimum 600znaków..."
+            required>
+                Wpisane = wyświetlone w przeglądarce
+            </textarea>
+        </main>
+        <footer>
+            <br>
+            <input type="checkbox" id="Zgoda">
+            <label for="Zgoda">Wyrażam zgodę</label>
+
+            <br>
+            <input type="checkbox" id="regulamin">
+            <label>Zapoznałem się z regulaminem</label>
+
+            <br>
+            <input type="checkbox" id="haslo" disabled checked>
+            <label>Zapisz hasło</label>
+            <br>
+            <input type="reset" value="ZERUJ">
+            <input type="submit" value="WYŚLIJ">
+        </footer>
+    </form>
+
+    
+</body>
+</html>
