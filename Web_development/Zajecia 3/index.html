@@ -27,7 +27,7 @@
 	
 	<section id="pierwsza">
 		<div class="zawartosc">
-			<div id="logo">GG</div>
+			<div id="logo">MW</div>
 			<h1>Strona <strong>OnePage</strong></h1>
 			<a href="#druga">Dalej</a>
 		</div>
@@ -62,8 +62,6 @@
 	
 	<section id="trzecia">
 		<div class="zawartosc">
-			<h3>tekst na zdjęciu</h3>
-		</div>
 	</section>
 	
 	<section id="czwarta">
@@ -74,14 +72,65 @@
 	
 	<section id="stopka">
 		<div class="zawartosc">
+			<!--
 			3 kolumny, a w nich:
 			<br>
 			1. dane kontaktowe (adres, kod, miasto), telefon, email
+			
 			<br>
 			2. 3 x hiperłącze do social media
 			<br>
 			3. miejsca na formularz "formularz"
-			
+			-->
+			<div id="daneKontaktowe" class="kolumnyStopka">
+			<ul>
+				<label><h1>Dane kontaktowe:</h1></label>
+					<li>Wiśniewski Mateusz</li>
+					<li>03-345 Warszawa</li>	
+					<li>ul.chmielna 20/2</li>	
+					<li>+48 324 234 123</li>	
+					<li>StronyOnePage@gmail.com</li>
+			</ul>
+		</div>
+		<div id="linkiStopka" class="kolumnyStopka">
+			<ul>
+				<ul>
+				<label><h1>Social media</h1></label>
+				<li><a href="#stopka"><img src="instagram.png" class="links_footer"></a> </li>
+				<li><a href="#stopka"><img src="facebook.png" class="links_footer"></a></li>
+				<li><a href="#stopka"><img src="youtube.png" class="links_footer"></a></li>
+			</ul>
+		</div>
+		<div id="formularzStopka" class="kolumnyStopka">
+			<ul>
+				<form>
+					<label>Formularz kontaktowy:</label>
+					<label>Imię:</label>
+					<input type="text"
+					placeholder="Wpisz imię...."
+					required>
+
+					<label>E-mail:</label>
+					<input type="email"
+					placeholder="Wpisz e-mail...."
+					required
+					value="@gmail.com">
+					<labale>Wybierz</labale>
+					<select>
+						<option>HTML</option>
+						<option>CSS</option>
+						<option>JS</option>
+					</select>
+					<label>Wpisz Wiaodomość:</label>
+					<textarea placeholder="minimum 600znaków..."
+					required>
+						Wpisane = wyświetlone w przeglądarce
+					</textarea>
+					<input type="reset" value="WYCZYŚĆ">
+            		<input type="submit" value="WYŚLIJ ZGŁOSZENIE">
+				</form>
+			</ul>
+		</div>
 		</div>
 	</section>
 	

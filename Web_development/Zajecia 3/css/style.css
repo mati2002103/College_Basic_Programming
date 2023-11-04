@@ -17,6 +17,7 @@ html{
 }
 body{
 	font-size: 1.6rem;
+	overflow: hidden;/*NON SCROLLABLE*/
 }
 
 /* NAWIGACJA */
@@ -28,6 +29,7 @@ nav{
 	align-items: center;
 	padding: 1rem 0;
 	
+	
 	/*śledzące menu*/
 	position: fixed;
 	width: 100%;
@@ -36,7 +38,9 @@ nav ol{
 	display: flex;
 	gap: 2rem;
 }
-nav ol li{}
+nav ol li{
+	
+}
 nav ol li a{
 	padding: 1rem 3vw;
 	display: block;
@@ -46,7 +50,7 @@ nav ol li a{
 	color: #ddd;
 	font-weight: 900;
 	text-transform: uppercase;
-	font-size: 1.2rem;
+	font-size: 2.4rem;
 	
 }
 nav ol li a:hover{
@@ -126,6 +130,7 @@ section{
 #druga{
 	background-color: #666;
 	padding: 4vh 3vw;
+	
 }
 #druga .zawartosc{
 	/*flex container*/
@@ -139,21 +144,58 @@ section{
 #druga h2{}
 #druga p{}
 
-#trzecia{}
-#trzecia .zawartosc{}
+#trzecia{
+	background:url(https://65designs.com/wp-content/uploads/2020/07/crop.jpg) no-repeat;
+}
+#trzecia .zawartosc{
+	
+}
 #trzecia h3{}
 
 #czwarta{
 	background-color: #999;
 }
-#czwarta .zawartosc{}
+#czwarta .zawartosc{
+}
 
 /* STOPKA */
 #stopka{
 	background-color: black;
 	color: white;
 }
+#stopka .zawartosc{
+	border:2px solid white;
+	padding:2rem;
+	display:flex;
+	justify-content: center;
+	line-height: 3rem;
 
+}
 
+#stopka .zawartosc .kolumnyStopka{
+	margin:2rem;
+	padding:2rem;
+	font-size:3rem;
+	line-height: 4rem;
+	letter-spacing: 2px;
+	
+	
+}
+#stopka .zawartosc ul{
+	
+
+}
+#stopka .zawartosc li{
+
+	
+}
+
+.links_footer{
+	height: 6rem;
+	width: 6rem;
+}
+form{
+	display:block;
+}
 
 
