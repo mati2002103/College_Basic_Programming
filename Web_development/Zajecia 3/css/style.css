@@ -13,11 +13,10 @@ html{
 	rem = root emphasis = wielokrotność rozmiaru fontu bazowego
 	em = emphasis = wielokrotność rozmiaru fontu w danym elementcie (lub nadrzędnym)
 	*/
-	font-size: 10px;
 }
 body{
 	font-size: 1.6rem;
-	overflow: hidden;/*NON SCROLLABLE*/
+	/*overflow: hidden;*//*NON SCROLLABLE*/
 }
 
 /* NAWIGACJA */
@@ -51,11 +50,21 @@ nav ol li a{
 	font-weight: 900;
 	text-transform: uppercase;
 	font-size: 2.4rem;
+	text-shadow: -1px 1px 0 #000, 
+	1px 1px 0 #000, 
+   1px -1px 0 #000, 
+  -1px -1px 0 #000; 
+	letter-spacing: 1rem;
 	
 }
 nav ol li a:hover{
 	background-color: #ddd;
 	color: #333;
+	text-shadow: -0.5px 0.5px 0  #e3f6f5, 
+	0.5px 0.5px 0  #e3f6f5, 
+   0.5px -0.5px 0  #e3f6f5, 
+  -0.5px -0.5px 0  #e3f6f5; 
+  border-radius:5%;
 }
 
 /* WSZYSTKIE SEKCJE */
@@ -121,6 +130,7 @@ section{
 	font-size: 1.2rem;
 	padding: 2rem 4rem;
 	border-radius: 2rem;
+	
 }
 #pierwsza a:hover{
 	background-color: #fff;
@@ -128,24 +138,70 @@ section{
 }
 
 #druga{
-	background-color: #666;
+	background-color:#333 ;
 	padding: 4vh 3vw;
+	width: 100%;
+	margin:0;
+	padding:0;
+	
 	
 }
 #druga .zawartosc{
 	/*flex container*/
 	display: flex;
 	gap: 40px;
+	max-width: 250rem;
+	margin:0;
+	padding:0;
+	font-size: 2rem;
+	background-color:#333 ;
+	
 }
 #druga article{
 	/*flex items*/
 	flex: 1;
+	border:3px white solid;
+	border-radius: 5%;
+	width: 33%;
+	padding:4rem;
+	color:white;
+	margin:2rem;
+	background-color:#333 ;
+	justify-content: none;
+	
 }
-#druga h2{}
-#druga p{}
+#druga article:hover{
+	background-color:#858282;
+	color:#000;
+}
+#druga h2{
+	margin-bottom: 3rem;
+	text-align: center;
+}
+#druga p{
+	font-size:1.8rem;
+	letter-spacing: 0.2rem;
+	line-height: 2.5rem;
+}
+#druga p b{
+	font-size:2.5rem;
+}
 
+#druga ol{
+  list-style-type:circle;
+  
+}
+#druga li{
+	margin-bottom: 2rem;
+	
+  }
+.icons_druga{
+	width:10rem;
+	height:10rem;
+}
 #trzecia{
-	background:url(https://65designs.com/wp-content/uploads/2020/07/crop.jpg) no-repeat;
+	background:url("https://65designs.com/wp-content/uploads/2020/07/crop.jpg") no-repeat center fixed;
+	background-size: cover; 
 }
 #trzecia .zawartosc{
 	
@@ -166,6 +222,8 @@ section{
 #stopka .zawartosc{
 	border:2px solid white;
 	padding:2rem;
+	max-width: 150rem;
+	max-height: 200rem;
 	display:flex;
 	justify-content: center;
 	line-height: 3rem;
@@ -173,11 +231,12 @@ section{
 }
 
 #stopka .zawartosc .kolumnyStopka{
-	margin:2rem;
+	margin:1rem;
 	padding:2rem;
-	font-size:3rem;
+	font-size:2rem;
 	line-height: 4rem;
 	letter-spacing: 2px;
+	max-width: 50rem;
 	
 	
 }
@@ -196,6 +255,10 @@ section{
 }
 form{
 	display:block;
+}
+.ikony_dane{
+	height:2rem;
+	width:2rem;
 }
 
 
