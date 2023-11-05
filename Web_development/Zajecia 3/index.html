@@ -101,11 +101,11 @@
 			<div id="daneKontaktowe" class="kolumnyStopka">
 			<ul>
 				<label><h1>Dane kontaktowe:</h1></label>
-					<li><img src="ikony/id-card (1).png" class="ikony_dane">Wiśniewski Mateusz</li>
-					<li><img src="ikony/map.png" class="ikony_dane">03-345 Warszawa</li>	
-					<li><img src="ikony/wall-street.png" class="ikony_dane">ul.chmielna 20/2</li>	
-					<li><img src="ikony/phone-call.png" class="ikony_dane">+48 324 234 123</li>	
-					<li><img src="ikony/mail.png" class="ikony_dane">OnePage@gmail.com</li>
+					<li><img src="ikony/id-card (1).png" class="ikony_dane"> Wiśniewski Mateusz</li>
+					<li><img src="ikony/map.png" class="ikony_dane"> 03-345 Warszawa</li>	
+					<li><img src="ikony/wall-street.png" class="ikony_dane"> ul.chmielna 20/2</li>	
+					<li><img src="ikony/phone-call.png" class="ikony_dane"> +48 324 234 123</li>	
+					<li><img src="ikony/mail.png" class="ikony_dane"> 1Page@gmail.com</li>
 			</ul>
 		</div>
 		<div id="linkiStopka" class="kolumnyStopka">
@@ -120,28 +120,35 @@
 		<div id="formularzStopka" class="kolumnyStopka">
 			<ul>
 				<form>
-					<label>Formularz kontaktowy:</label>
+					<label>Złóż zlecenie:</label><br>
 					<label>Imię:</label>
 					<input type="text"
 					placeholder="Wpisz imię...."
-					required>
-
+					required><br>
+					
 					<label>E-mail:</label>
 					<input type="email"
 					placeholder="Wpisz e-mail...."
 					required
-					value="@gmail.com">
-					<labale>Wybierz</labale>
+					value="@gmail.com"><br>
+					<label>Usługa</label>
 					<select>
-						<option>HTML</option>
-						<option>CSS</option>
-						<option>JS</option>
-					</select>
-					<label>Wpisz Wiaodomość:</label>
+						<option>Strona internetowa</option>
+						<option>Bazy danych</option>
+						<option>Backend</option>
+					</select><br>
+					
+					<label>Opis zlecenia:</label>
 					<textarea placeholder="minimum 600znaków..."
 					required>
 						Wpisane = wyświetlone w przeglądarce
-					</textarea>
+					</textarea><br>
+					<input type="checkbox" id="Zgoda">
+					<label for="Zgoda" required>Wyrażam zgodę na przetwarzanie moich danych</label>
+
+					<br>
+					<input type="checkbox" id="regulamin" required>
+					<label>Zapoznałem się z regulaminem</label><br>
 					<input type="reset" value="WYCZYŚĆ">
             		<input type="submit" value="WYŚLIJ ZGŁOSZENIE">
 				</form>

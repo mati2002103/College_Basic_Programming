@@ -49,12 +49,12 @@ nav ol li a{
 	color: #ddd;
 	font-weight: 900;
 	text-transform: uppercase;
-	font-size: 2.4rem;
+	font-size: 1.5rem;
 	text-shadow: -1px 1px 0 #000, 
 	1px 1px 0 #000, 
    1px -1px 0 #000, 
   -1px -1px 0 #000; 
-	letter-spacing: 1rem;
+	letter-spacing: 0.8rem;
 	
 }
 nav ol li a:hover{
@@ -218,47 +218,51 @@ section{
 #stopka{
 	background-color: black;
 	color: white;
+	width: 100%;
 }
 #stopka .zawartosc{
 	border:2px solid white;
 	padding:2rem;
-	max-width: 150rem;
-	max-height: 200rem;
 	display:flex;
 	justify-content: center;
 	line-height: 3rem;
-
+	width: 60%;
+	max-width: none;
 }
 
 #stopka .zawartosc .kolumnyStopka{
+	font-size:1.5rem;
 	margin:1rem;
 	padding:2rem;
 	font-size:2rem;
-	line-height: 4rem;
-	letter-spacing: 2px;
-	max-width: 50rem;
+	line-height: 3rem;
+	letter-spacing: 1px;
+	width:25%;
+	text-align: center;
 	
 	
 }
 #stopka .zawartosc ul{
-	
-
-}
-#stopka .zawartosc li{
-
+	text-align: left;
 	
 }
+#stopka .zawartosc #linkiStopka ul{
+	text-align: center;
+
+}
+#stopka .links_footer{
+	
+} 
 
 .links_footer{
 	height: 6rem;
 	width: 6rem;
 }
-form{
-	display:block;
-}
+
 .ikony_dane{
 	height:2rem;
 	width:2rem;
 }
+
 
 
