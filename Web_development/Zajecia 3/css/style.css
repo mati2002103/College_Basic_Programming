@@ -170,6 +170,9 @@ section{
 	justify-content: none;
 	
 }
+#druga article b{
+	font-weight: 900;
+}
 #druga article:hover{
 	background-color:#858282;
 	color:#000;
@@ -209,38 +212,44 @@ section{
 #trzecia h3{}
 
 #czwarta{
-	background-color: #999;
+	background:url("https://img.freepik.com/premium-zdjecie/prosty-kod-html-strony-internetowej-javascript-front-end-webowy-jezyk-programowania-do-kodowania-stron-internetowych_372999-247.jpg") no-repeat center fixed;
+	background-size: cover; 
 }
 #czwarta .zawartosc{
 }
 
 /* STOPKA */
 #stopka{
-	background-color: black;
+	background-color: #233142;
 	color: white;
 	width: 100%;
 }
 #stopka .zawartosc{
-	border:2px solid white;
+	border:2px solid #f95959;
 	padding:2rem;
 	display:flex;
 	justify-content: center;
 	line-height: 3rem;
-	width: 60%;
+	width: 80%;
 	max-width: none;
 }
 
 #stopka .zawartosc .kolumnyStopka{
 	font-size:1.5rem;
 	margin:1rem;
-	padding:2rem;
+	padding:1rem;
 	font-size:2rem;
 	line-height: 3rem;
 	letter-spacing: 1px;
-	width:25%;
+	width:30%;
 	text-align: center;
+
 	
 	
+}
+#formularzStopka{
+		width: 30%;
+		
 }
 #stopka .zawartosc ul{
 	text-align: left;
@@ -264,5 +273,84 @@ section{
 	width:2rem;
 }
 
+#stopka .naglowki_stopka{
+	font-weight: 900;
+	font-size:2.5rem;
+}
+#stopka .zgody{
+	font-size:1rem;
+	letter-spacing: 0.05rem;
+	display:inline-block;
+	
+}
+.zgody:hover{
+	color:red;
+}
+form input[type=checkbox]{
+	width:1.5rem;
+	height: 1.5rem;
+}
+form{
+	line-height: 3rem;
+	
+}
+form  input{
+	display:inline-block;
+	width:auto;
+	height: 1.5rem;
+	background-color:#e3e3e3;
 
+
+}
+form select{
+	width: 10rem;
+	height: 2rem;
+	background-color:#e3e3e3;
+}
+form  input:focus{
+	outline: 0;
+	background-color: rgb(144, 141, 141);
+	transform:scale(1.1);
+	border-radius: 1rem;
+	
+}
+::placeholder{
+	color:black;
+	font-weight: 200;
+
+}
+form textarea{
+	border-radius: 1rem;
+	background-color:#e3e3e3;
+
+}
+form textarea:focus{
+	outline: 0;
+	background-color: rgb(141, 144, 144);
+	transform:scale(1.1);
+	border-radius: 1rem;
+	color: black;
+}
+
+form  input[type=reset],form  input[type=submit]{
+	color:blueviolet;
+	border:0;
+	border-radius: 1rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	cursor:pointer;
+	font-size:1.2rem;
+	padding:0 0.5rem 1rem 0.5rem;
+	width: auto;
+	
+}
+
+
+
+form  input[type=submit]:hover{
+	background-color: green;
+}
+form  input[type=reset]:hover{
+	background-color: red;
+}
 
