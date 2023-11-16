@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Nazwisko Imię OnePage</title>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- OSADZAMY PLIKI CSS -->
 	<!-- 1. reset.css = usuwa domyślne style HTML -->
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -14,7 +14,37 @@
 </head>
 
 <body>
-	
+	<!--Nawigacja Mobile-->
+	<!--pełnoekranowa nakładka-->
+	<div class="nakladka" id="MENU">
+		<a href="javascript:void(0)" class="zamknijX" onClick="zamknijMenu()">&times;</a>
+		<ol>
+			<li><a href="#pierwsza" onClick="zamknijMenu()">Pierwsza</a></li>
+			<li><a href="#druga" onClick="zamknijMenu()">Druga</a></li>
+			<li><a href="#trzecia" onClick="zamknijMenu()">Trzecia</a></li>
+			<li><a href="#czwarta" onClick="zamknijMenu()">Czwarta</a></li>
+			<li><a href="#stopka" onClick="zamknijMenu()">Stopka</a></li>
+		</ol>
+
+	</div>
+	<!--przycisk hamburger menu-->
+	<span class="burger" onClick="otworzMenu()">&#9776;</span>
+	<!--Skrypt uruchamiający menu-->
+	<script>
+		function otworzMenu(){
+			document.getElementById("MENU").style.width = "100%";
+		}
+		function zamknijMenu(){
+			document.getElementById("MENU").style.width = "0%";
+		}
+		
+
+	</script>
+
+	<!-- trzeba skończyć sekcje 4-->
+
+
+	<!--	Nawigacja DESKTOP     -->
 	<nav>
 		<ol>
 			<li><a href="#pierwsza">Pierwsza</a></li>
@@ -73,6 +103,9 @@
 	
 	<section id="trzecia">
 		<div class="zawartosc">
+		<h3>ONE PAGE</h3>	
+		</div>
+
 	</section>
 	
 	<section id="czwarta">
@@ -94,60 +127,60 @@
 			3. miejsca na formularz "formularz"
 			-->
 			<div id="daneKontaktowe" class="kolumnyStopka">
-			<ul>
-				<label class="naglowki_stopka"><h1>Dane kontaktowe:</h1></label>
-					<li><img src="ikony/id-card (1).png" class="ikony_dane"> Wiśniewski Mateusz</li>
-					<li><img src="ikony/map.png" class="ikony_dane"> 03-345 Warszawa</li>	
-					<li><img src="ikony/wall-street.png" class="ikony_dane"> ul.chmielna 20/2</li>	
-					<li><img src="ikony/phone-call.png" class="ikony_dane"> +48 324 234 123</li>	
-					<li><img src="ikony/mail.png" class="ikony_dane"> 1Page@gmail.com</li>
-			</ul>
-		</div>
-		<div id="linkiStopka" class="kolumnyStopka">
-			<ul>
 				<ul>
-				<label class="naglowki_stopka"><h1>Social media</h1></label>
-				<li><a href="#stopka"><img src="ikony/instagram.png" class="links_footer"></a> </li>
-				<li><a href="#stopka"><img src="ikony/facebook.png" class="links_footer"></a></li>
-				<li><a href="#stopka"><img src="ikony/youtube.png" class="links_footer"></a></li>
-			</ul>
-		</div>
-		<div id="formularzStopka" class="kolumnyStopka">
-			<ul>
-				<form>
-					<label class="naglowki_stopka">Złóż zlecenie:</label><br>
-					<label>Imię:</label>
-					<input type="text"
-					placeholder="Wpisz imię...."
-					required><br>
-					
-					<label>E-mail:</label>
-					<input type="email"
-					placeholder="Wpisz e-mail...."
-					required
-					value="@gmail.com"><br>
-					<label>Usługa:</label>
-					<select>
-						<option>Strona internetowa</option>
-						<option>Bazy danych</option>
-						<option>Backend</option>
-					</select><br>
-					
-					<label>Opis zlecenia:</label><br>
-					<textarea placeholder="Opis zlecenia"
-					required></textarea><br>
-					<input type="checkbox" id="Zgoda"  required>
-					<label for="Zgoda" class="zgody" required>Wyrażam zgodę na przetwarzanie moich danych</label>
+					<label class="naglowki_stopka"><h1>Dane kontaktowe:</h1></label>
+						<li><img src="ikony/id-card (1).png" class="ikony_dane"> Wiśniewski Mateusz</li>
+						<li><img src="ikony/map.png" class="ikony_dane"> 03-345 Warszawa</li>	
+						<li><img src="ikony/wall-street.png" class="ikony_dane"> ul.chmielna 20/2</li>	
+						<li><img src="ikony/phone-call.png" class="ikony_dane"> +48 324 234 123</li>	
+						<li><img src="ikony/mail.png" class="ikony_dane"> 1Page@gmail.com</li>
+				</ul>
+			</div>
+			<div id="linkiStopka" class="kolumnyStopka">
+				<ul>
+					<ul>
+					<label class="naglowki_stopka"><h1>Social media</h1></label>
+					<li><a href="#stopka"><img src="ikony/instagram.png" class="links_footer"></a> </li>
+					<li><a href="#stopka"><img src="ikony/facebook.png" class="links_footer"></a></li>
+					<li><a href="#stopka"><img src="ikony/youtube.png" class="links_footer"></a></li>
+				</ul>
+			</div>
+			<div id="formularzStopka" class="kolumnyStopka">
+				<ul>
+					<form>
+						<label class="naglowki_stopka">Złóż zlecenie:</label><br>
+						<label>Imię:</label>
+						<input type="text"
+						placeholder="Wpisz imię...."
+						required><br>
+						
+						<label>E-mail:</label>
+						<input type="email"
+						placeholder="Wpisz e-mail...."
+						required
+						value="@gmail.com"><br>
+						<label>Usługa:</label>
+						<select>
+							<option>Strona internetowa</option>
+							<option>Bazy danych</option>
+							<option>Backend</option>
+						</select><br>
+						
+						<label>Opis zlecenia:</label><br>
+						<textarea placeholder="Opis zlecenia"
+						required></textarea><br>
+						<input type="checkbox" id="Zgoda"  required>
+						<label for="Zgoda" class="zgody" required>Wyrażam zgodę na przetwarzanie moich danych</label>
 
-					<br>
-					<input type="checkbox" id="regulamin"  required>
-					<label  for="regulamin" class="zgody">Zapoznałem się z regulaminem</label><br>
+						<br>
+						<input type="checkbox" id="regulamin"  required>
+						<label  for="regulamin" class="zgody">Zapoznałem się z regulaminem</label><br>
 
-					<input type="reset" value="WYCZYŚĆ">
-            		<input type="submit" value="WYŚLIJ ZGŁOSZENIE">
-				</form>
-			</ul>
-		</div>
+						<input type="reset" value="WYCZYŚĆ">
+						<input type="submit" value="WYŚLIJ ZGŁOSZENIE">
+					</form>
+				</ul>
+			</div>
 		</div>
 	</section>
 	

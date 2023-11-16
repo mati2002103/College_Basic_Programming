@@ -1,0 +1,291 @@
+@charset "utf-8";
+/*import fontów z google*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* GLOBALNE SELEKTORY */
+*{
+	transition: 400ms;
+}
+html{
+	scroll-behavior: smooth;
+	font-size: 16px;/*domyślnie*/
+	/* 
+	em = emphasis = rozmiar fontu elementu nadrzędnego 
+	rem = root emphasis = rozmiar fontu w dokumencie
+	*/
+	font-size: 10px;
+}
+body{
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.6rem;
+}
+
+/* NAWIGACJA */
+nav{
+	background-color: #333;
+	color: white;
+	/*flex container*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 0;
+	
+	/*podążające menu*/
+	position: fixed;
+	width: 100%;/*dodajemy, bo fixed usunęło domyślną szer.*/
+}
+nav ol{
+	display: flex;
+	justify-content: space-evenly;
+	width: 60%;
+}
+nav ol li{}
+nav ol li a{
+	text-decoration: none;
+	padding: 1rem 4vw;
+	display: block;
+	color: #ccc;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 1.2rem;
+}
+nav ol li a:hover{
+	background-color: whitesmoke;
+	color: #333;
+}
+
+/* WSZYSTKIE SEKCJE */
+section{
+	min-height: 95vh;/* vh = viewport height = % wysokości okna przeglądarki */
+	/* min-height = wysokość może być większa, w zależności od zawartości */
+	padding: 0 2rem;
+	/*FLEX CONTAINER*/
+	display: flex;/*uruchamiamy flexbox*/
+	align-items: center;/*wyśrodkowanie na wysokość*/
+	justify-content: center;
+	
+	/*żeby menu nie najeższało na treść*/
+	scroll-margin-top: 5.2rem;
+}
+/* selektor class ma prefix '.' */
+.zawartosc{
+	/*background-color: red;*/
+	max-width: 1200px;
+	/*FLEX ITEM*/
+	
+}
+
+/* POSZCZEGÓLNE SEKCJE */
+/* selektor id ma prefix "#" */
+#pierwsza{
+	background-color: #efefef;
+}
+#pierwsza .zawartosc{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2vh;
+}
+#logo{
+	background-color: #ddd;
+	font-size: 16rem;
+	font-weight: 100;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;/*koło*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 1rem 1rem rgba(0,0,0,.4);
+}
+#pierwsza h1{
+	font-size: 3em;
+	font-weight: 200;
+	text-align: center;
+}
+#pierwsza h1 strong{
+	font-weight: 900;
+}
+#pierwsza a{
+	text-decoration: none;
+	padding: 2rem 4rem;
+	border-radius: 2rem;
+	margin-top: 10vh;
+	color: #333;
+	font-weight: 300;
+}
+#pierwsza a:hover{
+	background-color: #ddd;
+	box-shadow: 0 .2em .7rem rgba(0,0,0,.3) inset;
+	color: #333;
+}
+
+#druga{
+	background-color: #666;
+	padding: 2em 1em;
+}
+#druga .zawartosc{
+	/*flex container*/
+	display: flex;
+	gap: 40px;/*odstępy między elementami*/
+	flex-wrap: nowrap;/*domyślnie*/
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+#druga article{
+	/*flex items*/
+	flex: 0 1 350px;/* domyślnie: 0 1 auto; zmieniamy tylko na pierwszej pozycji flex-grow na 1 */
+}
+#druga article h2{
+	font-size: 3rem;
+	font-weight: 200;
+	color: #ccc;
+	margin-bottom: 2rem;
+}
+#druga article p{
+	line-height: 2rem;
+	margin-bottom: 2rem;
+}
+
+#trzecia{}
+#trzecia .zawartosc{}
+
+#czwarta{
+	background-color: #999;
+}
+#czwarta .zawartosc{}
+
+/* STOPKA STRONY */
+#stopka{
+	background-color: #333;
+	color: white;
+	padding: 5vw;
+}
+#stopka .zawartosc{
+	border: 1px solid rgba(0,0,0,0.2);
+	display: flex;
+	gap: 5vw;
+	padding: 7vw;
+	width: 70vw;
+	box-shadow: 0 0 4rem rgba(0,0,0,.3);
+	border-radius: 2rem;
+}
+#stopka article{
+	flex: 1;
+	line-height: 2rem;
+	font-size: 1.4rem;
+}
+#stopka article h6{
+	font-size: 2.2rem;
+	font-weight: 200;
+	color: #999;
+	margin-bottom: 3vh;
+}
+#stopka article ul{}
+#stopka article ul li{
+	padding-bottom: 2rem;
+}
+#stopka article ul li strong{
+	display: block;
+	padding-bottom: .5rem;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #999;
+}
+#stopka article ul li a{
+	color: #fff;
+	text-decoration: none;
+}
+#stopka article ul li a:hover{}
+#stopka article form{}
+#stopka article form input{
+	background: none;
+	border: 0;
+	border-bottom: 1px #666 solid;
+	margin-bottom: 1rem;
+	padding: .5rem 0;
+	font-family: inherit;
+	font-size: 1.2rem;
+	width: 100%;
+	box-sizing: border-box;
+	color: white;
+	font-weight: 600;
+}
+#stopka article form input:focus{
+	outline: 0;
+	transform: scale(1.1);
+	border-bottom: 1px solid white;
+}
+#stopka article form input[type=checkbox]{
+	width: auto;
+}
+#stopka article form label{
+	font-size: 1rem;
+	display: inline-block;
+	transform: translateY(-.25rem);
+}
+#stopka article form input[type=reset],
+#stopka article form input[type=submit]{
+	border: 0;
+	color: #ccc;
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 1rem;
+	display: inline-block;
+	margin-right: 2rem;
+	cursor: pointer;
+	margin-top: 1rem;
+	width: auto;
+}
+#stopka article form input[type=reset]:hover{
+	color: orange;
+}
+#stopka article form input[type=submit]:hover{
+	color: cornflowerblue;
+}
+
+/* STYLE RESPONSYWNE */
+/*na wszystkich urządzeniach maksymalnie do 700px szer. okna przegl.*/
+@media all and (max-width:700px){
+	nav{
+		display: none;
+	}
+	section{
+		min-height: 100vh;
+	}
+	#pierwsza{
+		background-color: #333;
+	}
+	#pierwsza h1{
+		color: #ccc;
+	}
+	#pierwsza a{
+		color: #ccc;
+		border: 1px solid #ccc;
+		padding: 2rem 5rem;
+	}
+	
+	#druga article{
+		flex: 1 1 350px;
+	}
+} 
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

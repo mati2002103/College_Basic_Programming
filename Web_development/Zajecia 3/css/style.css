@@ -1,190 +1,241 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-/* SELEKTORY GLOBALNE */
+
+/* GLOBALNE SELEKTORY */
 *{
 	transition: 400ms;
-	scroll-behavior: smooth;
+	box-sizing: border-box;
 }
 html{
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px; /* domyślnie */
-	
-	/*
-	rem = root emphasis = wielokrotność rozmiaru fontu bazowego
-	em = emphasis = wielokrotność rozmiaru fontu w danym elementcie (lub nadrzędnym)
+	scroll-behavior: smooth;
+	font-size: 16px;/*domyślnie*/
+	/* 
+	em = emphasis = rozmiar fontu elementu nadrzędnego 
+	rem = root emphasis = rozmiar fontu w dokumencie
 	*/
+	font-size: 10px;
 }
 body{
+	font-family: 'Poppins', sans-serif;
 	font-size: 1.6rem;
-	/*overflow: hidden;*//*NON SCROLLABLE*/
+}
+/*Nawigacja Mobile*/
+.burger{
+	position:fixed;
+	display:none;
+	top:2rem;
+	right:2rem;
+	background-color: #eee;
+	font-size:4rem;
+	padding:1rem 1.25rem;
+	cursor: pointer;
+	border-radius: 1rem;
+	
+}
+.nakladka{
+	position:fixed;
+	background-color:rgba(255,255,255,.9);
+	height:100%;
+	width:0%;
+	right:0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	overflow:hidden;
+}
+.zamknijX{
+	position:absolute;
+	top:1.9rem;
+	right:3.4rem;
+	font-size:6rem;	
+	text-decoration: none;
+	color:#333;
+}
+.nakladka ol{
+	display:flex;
+	flex-direction: column;
+	gap:4vh;
+	text-align: center;
+}
+.nakladka ol a{
+	text-decoration: none;
+	color:#333;
+	font-weight: 700;
+	font-size: 7vw;
+	display:block;
+	padding:3vh 25vw;
+}
+.nakladka ol a:hover{
+	background-color: #333;
+	color:#eee;
 }
 
-/* NAWIGACJA */
+
+
+
+/* NAWIGACJA Desktop */
 nav{
 	background-color: #333;
-	color: #fff;
+	color: white;
+	/*flex container*/
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 1rem 0;
 	
-	
-	/*śledzące menu*/
+	/*podążające menu*/
 	position: fixed;
-	width: 100%;
+	width: 100%;/*dodajemy, bo fixed usunęło domyślną szer.*/
 }
 nav ol{
 	display: flex;
-	gap: 2rem;
+	justify-content: space-evenly;
+	width: 60%;
 }
-nav ol li{
-	
-}
+nav ol li{}
 nav ol li a{
-	padding: 1rem 3vw;
-	display: block;
 	text-decoration: none;
-	
-	/*typografia*/
-	color: #ddd;
-	font-weight: 900;
+	padding: 1rem 4vw;
+	display: block;
+	color: #ccc;
 	text-transform: uppercase;
-	font-size: 1.5rem;
-	text-shadow: -1px 1px 0 #000, 
-	1px 1px 0 #000, 
-   1px -1px 0 #000, 
-  -1px -1px 0 #000; 
-	letter-spacing: 0.8rem;
-	
+	font-weight: 800;
+	font-size: 1.2rem;
 }
 nav ol li a:hover{
-	background-color: #ddd;
+	background-color: whitesmoke;
 	color: #333;
-	text-shadow: -0.5px 0.5px 0  #e3f6f5, 
-	0.5px 0.5px 0  #e3f6f5, 
-   0.5px -0.5px 0  #e3f6f5, 
-  -0.5px -0.5px 0  #e3f6f5; 
-  border-radius:5%;
 }
+
+
+
 
 /* WSZYSTKIE SEKCJE */
 section{
-	min-height: 95vh;/*vh = viewport height = % wysokości okna przeglądarki*/
-	/*min-height = wysokość ma tyle, ale może być wyższa w zależności od zawartości*/
-	
-	/*flex container*/
+	min-height: 95vh;/* vh = viewport height = % wysokości okna przeglądarki */
+	/* min-height = wysokość może być większa, w zależności od zawartości */
+	padding: 0 2rem;
+	/*FLEX CONTAINER*/
 	display: flex;/*uruchamiamy flexbox*/
-	align-items: center;/*wyśrodkowanie na wys.*/
+	align-items: center;/*wyśrodkowanie na wysokość*/
 	justify-content: center;
 	
-	/*odsunięcie przy przewijaniu*/
-	scroll-margin-top: 56px;
+	/*żeby menu nie najeższało na treść*/
+	scroll-margin-top: 5.2rem;
 }
-/* selektor CLASS ma prefix '.' */
+/* selektor class ma prefix '.' */
 .zawartosc{
-	/*flex items*/
-	/*background-color: orange;*/
-	max-width: 1000px;
+	/*background-color: red;*/
+	max-width: 1400px;
+	/*FLEX ITEM*/
+	
 }
 
 /* POSZCZEGÓLNE SEKCJE */
-/* selektor ID ma prefix '#' */
+/* selektor id ma prefix "#" */
 #pierwsza{
-	background-color: #ededed;
+	background-color: #efefef;
 }
 #pierwsza .zawartosc{
 	display: flex;
-	flex-direction: row;/*domyślnie*/
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 4vh;
+	gap: 2vh;
 }
 #logo{
-	font-size: 9rem;
+	background-color: #ddd;
+	font-size: 16rem;
 	font-weight: 100;
-	background-color: #fff;
-	color: #333;
-	height: 20rem;
-	width: 20rem;
-	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;/*koło*/
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	box-shadow: 0 1rem 1rem rgba(0,0,0,.2);
+	align-items: center;
+	box-shadow: 0 1rem 1rem rgba(0,0,0,.4);
 }
 #pierwsza h1{
-	font-size: 6rem;
-	font-weight: 100;
-	color: #333;
+	font-size: 3em;
+	font-weight: 200;
+	text-align: center;
 }
 #pierwsza h1 strong{
 	font-weight: 900;
 }
 #pierwsza a{
-	margin-top: 7vh;
-	color: #333;
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: 900;
-	font-size: 1.2rem;
 	padding: 2rem 4rem;
 	border-radius: 2rem;
-	
+	margin-top: 10vh;
+	color: #333;
+	font-weight: 300;
 }
 #pierwsza a:hover{
-	background-color: #fff;
-	box-shadow: 0 .3rem 2rem rgba(0,0,0,.3) inset;
+	background-color: #ddd;
+	box-shadow: 0 .2em .7rem rgba(0,0,0,.3) inset;
+	color: #333;
 }
 
 #druga{
-	background-color:#333 ;
-	padding: 4vh 3vw;
-	width: 100%;
-	margin:0;
-	padding:0;
-	
-	
+	background-color: #666;
+	padding: 2em 1em;
 }
 #druga .zawartosc{
 	/*flex container*/
 	display: flex;
-	gap: 40px;
-	max-width: 250rem;
-	margin:0;
-	padding:0;
-	font-size: 2rem;
-	background-color:#333 ;
+	gap: 40px;/*odstępy między elementami*/
+	flex-wrap: nowrap;/*domyślnie*/
+	flex-wrap: wrap;
+	justify-content: center;
+	
 	
 }
 #druga article{
 	/*flex items*/
 	flex: 1;
 	border:3px white solid;
-	border-radius: 5%;
-	width: 33%;
+	border-radius: 1rem;
 	padding:4rem;
 	color:white;
 	margin:2rem;
 	background-color:#333 ;
 	justify-content: none;
-	
+	flex: 1 1 350px;/* domyślnie: 0 1 auto; zmieniamy tylko na pierwszej pozycji flex-grow na 1 */
+
+	margin:0;
+	padding:1rem 0 0 2rem;
+	font-size:2rem;
+
 }
+
+#druga article h2{
+	font-size: 3rem;
+	font-weight: 200;
+	color: #ccc;
+	margin-bottom: 2rem;
+}
+
 #druga article b{
 	font-weight: 900;
+	
 }
 #druga article:hover{
 	background-color:#858282;
 	color:#000;
 }
 #druga h2{
-	margin-bottom: 3rem;
-	text-align: center;
+	font-size: 3rem;
+	font-weight: 200;
+	color: #ccc;
+	margin-bottom: 2rem;
 }
 #druga p{
 	font-size:1.8rem;
 	letter-spacing: 0.2rem;
 	line-height: 2.5rem;
+	
 }
 #druga p b{
 	font-size:2.5rem;
@@ -203,13 +254,28 @@ section{
 	height:10rem;
 }
 #trzecia{
-	background:url("https://65designs.com/wp-content/uploads/2020/07/crop.jpg") no-repeat center fixed;
+	background:url("https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg") no-repeat center fixed;
 	background-size: cover; 
 }
 #trzecia .zawartosc{
-	
+	background-color: rgba(255,255,255,.5);
+	padding:5rem 1rem;
+	backdrop-filter:blur(0);
+	border-radius: 50rem;
 }
-#trzecia h3{}
+#trzecia h3{
+	font-size: 20vw;
+	text-align:center;
+	font-weight: 900;
+	line-height: .8em;
+	color:red;
+	text-shadow:0 1rem 1rem rgba(0,0,0,.8);
+	mix-blend-mode: hard-light;
+
+	
+	
+
+}
 
 #czwarta{
 	background:url("https://img.freepik.com/premium-zdjecie/prosty-kod-html-strony-internetowej-javascript-front-end-webowy-jezyk-programowania-do-kodowania-stron-internetowych_372999-247.jpg") no-repeat center fixed;
@@ -222,41 +288,29 @@ section{
 #stopka{
 	background-color: #233142;
 	color: white;
-	width: 100%;
 }
 #stopka .zawartosc{
 	border:2px solid #f95959;
-	padding:2rem;
 	display:flex;
-	justify-content: center;
 	line-height: 3rem;
-	width: 80%;
-	max-width: none;
+	gap:2rem;
+	padding: 2rem;
+	flex-wrap: wrap;
 }
 
 #stopka .zawartosc .kolumnyStopka{
+	flex: 1 1 200px;
 	font-size:1.5rem;
-	margin:1rem;
-	padding:1rem;
 	font-size:2rem;
 	line-height: 3rem;
-	letter-spacing: 1px;
-	width:30%;
-	text-align: center;
-
-	
-	
 }
 #formularzStopka{
-		width: 30%;
 		
 }
 #stopka .zawartosc ul{
-	text-align: left;
 	
 }
 #stopka .zawartosc #linkiStopka ul{
-	text-align: center;
 
 }
 #stopka .links_footer{
@@ -353,4 +407,72 @@ form  input[type=submit]:hover{
 form  input[type=reset]:hover{
 	background-color: red;
 }
+
+
+
+/* STYLE RESPONSYWNE */
+/*na wszystkich urządzeniach maksymalnie do 700px szer. okna przegl.*/
+@media all and (max-width:700px){
+	.burger{
+		display:block;
+	}
+	nav{
+		display: none;
+	}
+	section{
+		min-height: 100vh;
+		scroll-margin-top:0;	
+	}
+	#pierwsza{
+		background-color: #333;
+	}
+	#pierwsza h1{
+		color: #ccc;
+	}
+	#pierwsza a{
+		color: #ccc;
+		border: 1px solid #ccc;
+		padding: 2rem 5rem;
+	}
+
+	#stopka{
+		background-color: #233142;
+		color: white;
+		text-wrap: nowrap;
+
+		
+	}
+	#stopka .zawartosc{
+		width: 100%;
+		display:block;
+		margin:1rem;
+		border: none;
+		text-align: center;;
+
+		
+		
+	}
+	
+	#stopka .zawartosc .kolumnyStopka{
+		font-size:2rem;
+		margin-left:auto;
+		margin-right:auto;
+
+	}
+	#formularzStopka{
+			
+	}
+	#stopka .zawartosc ul{
+		
+		text-align: left;
+		
+	}
+	#stopka .zawartosc #linkiStopka ul{
+		text-align: center;
+	
+	}
+	#stopka .links_footer{
+		
+	} 
+} 
 
