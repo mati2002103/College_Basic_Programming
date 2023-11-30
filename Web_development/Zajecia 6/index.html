@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        section {
+            min-height: 100vh;
+            border-bottom: 1px solid #aaa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-direction: column;
+
+        }
+
+        h1 {
+            padding: 3rem;
+            animation-name: animacja1;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: -2s;
+        }
+
+        @keyframes animacja1 {
+            from {
+                background-color: red;
+                border-radius: 3rem;
+            }
+
+            to {
+                background-color: blue;
+                border-radius: 1rem;
+                box-shadow: 0 1rem 1rem rgba(0, 0, 0, .4);
+                color: #fff;
+            }
+        }
+
+        h2 {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+
+            animation: animacja2 5s ease 1s infinite alternate-reverse;
+        }
+
+        @keyframes animacja2 {
+            0% {
+                background-color: cornflowerblue;
+            }
+
+            1% {}
+
+            2% {}
+
+            20% {
+                transform: translate(0, -200px) rotate(360deg);
+            }
+
+            50% {
+                transform: translate(200px, -200px) scale(2);
+                background-color: yellowgreen;
+                box-shadow: 0 1rem 1rem rgba(0, 0, 0, .5);
+                border-bottom: 1px solid black;
+
+
+
+            }
+
+            60% {
+                transform: translate(200px, 200px);
+            }
+
+            90% {
+                transform: translate(0, 200px) rotate(-3600deg);
+
+            }
+
+            100% {
+                background-color: cornflowerblue;
+
+            }
+        }
+
+        h3 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: lime;
+            border:1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+
+            animation: animacja3 10s ease 1s infinite;
+
+        }
+
+        hr{
+            width:300px;
+            margin:0;
+            transform:translateY(-19px);
+        }   
+        
+
+        @keyframes animacja3 {
+            0% { 
+                /*zacząć od tego, spłaszczona scale i dopiero leci na góre*/
+            }
+            
+
+            
+
+            20% {
+                transform: translate(0, -30vh);
+                
+
+            }
+
+/*
+
+            40% {
+                transform: translate(0, -75%);
+               height: 150px;
+               width:300px;
+
+
+
+            }
+
+
+
+            60% {
+                transform: translate(0, 75%);
+                height: 200px;
+                width:150px;
+
+            }
+
+
+            80% {
+                transform: translate(0, 75%);
+                height: 200px;
+                width:150px;
+
+            }
+
+
+            100% {
+                transform: translate(0, -75%);
+                height: 150px;
+                width:300px;
+
+
+            }
+            */
+
+
+        }
+
+        h4 {}
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section>
+        <h1>Animacja1</h1>
+    </section>
+    <section>
+        <h2>Animacja2</h2>
+    </section>
+    <section>
+        <h3></h3>
+        <hr>
+    </section>
+    <section>
+        <h4>Animacja4</h4>
+    </section>
+
+</body>
+
+</html>
