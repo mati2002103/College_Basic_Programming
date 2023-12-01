@@ -7,13 +7,12 @@ class Geometric{
     double q;
     public:
     Geometric(int a, double q);
-    double operator[](int index){};
+    double operator[](int index) const;
 
 };
 Geometric::Geometric(int a, double q) : a(a), q(q){};
-double Geometric::operator[](int index){
-    double wynik = this->a*std::pow(this->q,index);
-    return wynik ;
+double Geometric::operator[](int index) const{
+    return this->a*std::pow(this->q,index);
 };
 
 
