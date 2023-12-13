@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         section {
             min-height: 100vh;
@@ -70,9 +69,7 @@
                 background-color: yellowgreen;
                 box-shadow: 0 1rem 1rem rgba(0, 0, 0, .5);
                 border-bottom: 1px solid black;
-
-
-
+                
             }
 
             60% {
@@ -94,15 +91,15 @@
             height: 50px;
             width: 50px;
             border-radius: 50%;
-            background-color: lime;
-            border:1px solid black;
+            background-color: lightblue;
+            border:2px solid black;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #fff;
 
-            animation: animacja3 10s ease 1s infinite;
-
+            animation: animacja3 2s ease 0s infinite;
+            transform: scaleY(0.7) translateY(10px);
         }
 
         hr{
@@ -114,60 +111,107 @@
 
         @keyframes animacja3 {
             0% { 
-                /*zacząć od tego, spłaszczona scale i dopiero leci na góre*/
             }
-            
-
-            
-
-            20% {
-                transform: translate(0, -30vh);
-                
-
+            3%{
+                transform: scaleY(1);
             }
 
-/*
-
-            40% {
-                transform: translate(0, -75%);
-               height: 150px;
-               width:300px;
-
-
-
+            50% {
+                transform: translate(0, -30vh) scaleY(1) ;
             }
 
-
-
-            60% {
-                transform: translate(0, 75%);
-                height: 200px;
-                width:150px;
-
+            97%{
+                transform: scaleY(1);
             }
-
-
-            80% {
-                transform: translate(0, 75%);
-                height: 200px;
-                width:150px;
-
-            }
-
-
             100% {
-                transform: translate(0, -75%);
-                height: 150px;
-                width:300px;
-
-
+                transform: scaleY(0.7) translateY(10px);
             }
-            */
+
 
 
         }
 
-        h4 {}
+        h4 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: black;
+            border:2px solid grey;
+            margin-right: auto;
+            margin-top:auto;
+            margin-bottom: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            animation: animacja4 5s ease 1s infinite;
+            font-weight: 900;
+            font-size: 2.5rem;
+
+        }
+        #S4{
+            min-height: 100vh;
+            border-bottom: 1px solid #aaa;
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            overflow: hidden;
+            flex-direction: column;
+
+
+        }
+        @keyframes animacja4 {
+            0% {
+                transform: translate(-10vw, 0) rotate(-90deg); 
+ 
+
+            }
+            
+
+            10% { 
+                transform: translate(15vw, 0) scale(1,1) rotate(30deg); 
+            }
+
+            20% {
+                transform: translate(30vw, -5vh) scale(1) rotate(20deg);  
+
+            }
+
+            30% {
+                transform: translate(20vw, -20vh) scale(1.5) rotate(180deg);  
+            }
+
+            40% {
+                transform: translate(20vw, 20vh) scale(1.5) rotate(90deg);  
+
+            }
+
+            50% {
+                transform: translate(20vw, 20vh) scale(1.5) rotate(90deg);  
+            }
+
+            60% {
+                transform: translate(80vw, 20vh) scale(1) rotate(0deg);  
+            }
+            70% {
+                transform: translate(80vw, -20vh) scale(1.5) rotate(200deg);  
+            }
+
+
+            80% {
+                transform: translate(50vw, 0vh) scale(3) rotate(90deg); 
+            }
+            90% {
+                transform: translate(80vw, 0vh) scale(1.5) rotate(3600deg);  
+            }
+
+            100% {          
+                transform: translate(100vw, 0vh) scale(1) rotate(3600deg);  
+            }
+        }
+
+
+
     </style>
     <title>Document</title>
 </head>
@@ -184,8 +228,8 @@
         <h3></h3>
         <hr>
     </section>
-    <section>
-        <h4>Animacja4</h4>
+    <section id="S4">
+        <h4>♕</h4>
     </section>
 
 </body>

@@ -278,8 +278,7 @@ section{
 }
 
 #czwarta{
-	background:url("https://img.freepik.com/premium-zdjecie/prosty-kod-html-strony-internetowej-javascript-front-end-webowy-jezyk-programowania-do-kodowania-stron-internetowych_372999-247.jpg") no-repeat center fixed;
-	background-size: cover; 
+	 	background-color: #666	;
 }
 #czwarta .zawartosc{
 }
@@ -303,6 +302,8 @@ section{
 	font-size:1.5rem;
 	font-size:2rem;
 	line-height: 3rem;
+	
+	margin:1.5rem;
 }
 #formularzStopka{
 		
@@ -407,6 +408,7 @@ form  input[type=submit]:hover{
 form  input[type=reset]:hover{
 	background-color: red;
 }
+
 
 
 

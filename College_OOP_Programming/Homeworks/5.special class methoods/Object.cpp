@@ -5,15 +5,27 @@ class Object{
     static int counter;
     public:
     Object();
+    Object(Object &o);
+    ~Object();
+
     static int count();
 };
+int Object::counter = 0;
+
     int Object::count(){
         return counter;
     }
 
     Object::Object(){
-        ++counter;
+        counter++;
     }
+    Object::Object(Object &o){
+           counter++;
+    };
+    Object::~Object(){
+        counter--;
+    }
+
 
 
 
