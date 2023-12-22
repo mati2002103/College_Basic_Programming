@@ -276,11 +276,35 @@ section{
 	
 
 }
-
 #czwarta{
-	 	background-color: #666	;
+	background:url("https://preview.redd.it/c3uhsgo1vx541.jpg?auto=webp&s=a45b583ebf921d3ad1649e77ad05e55226140120") no-repeat center fixed;
+
 }
-#czwarta .zawartosc{
+#czwarta .zawartosc {
+    display: flex;
+    flex-wrap: wrap;
+	
+}
+
+#czwarta .kolumna {
+    flex: 1 1 48%;
+    margin: 1rem;
+    padding: 1.5rem;
+    background-color: #333;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+#czwarta .kolumna h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+#czwarta .kolumna p {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: #eee;
 }
 
 /* STOPKA */
@@ -436,6 +460,11 @@ form  input[type=reset]:hover{
 		border: 1px solid #ccc;
 		padding: 2rem 5rem;
 	}
+	#czwarta .kolumna {
+        flex: 1 1 100%;
+        margin: 1rem 0;
+		
+    }
 
 	#stopka{
 		background-color: #233142;
