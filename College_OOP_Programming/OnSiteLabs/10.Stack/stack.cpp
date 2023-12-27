@@ -1,6 +1,6 @@
 #include "stack.hpp"
 
-Stack::Stack(){}
+Stack::Stack(){}    
 Stack::Stack(const Stack &s) {
     top = nullptr;
     if (s.top != nullptr) {
