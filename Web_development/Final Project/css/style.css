@@ -1,0 +1,176 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* GLOBALNE SELEKTORY */
+*{
+	transition: 400ms;
+	box-sizing: border-box;
+}   
+html{
+	scroll-behavior: smooth;
+	font-size: 10px;
+}
+body{
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.6rem;
+}
+/* NAWIGACJA Desktop */
+nav{
+	background-color: #F9FBFA;
+	color: #333;
+	/*flex container*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem 0;
+	
+	/*podążające menu*/
+	position: fixed;
+	width: 100%;/*dodajemy, bo fixed usunęło domyślną szer.*/
+    border-bottom:  0.2rem solid #40513B ;
+}
+nav ol{
+	display: flex;
+	justify-content: center;
+	width: 80%;
+}
+nav ol img{
+    height: 4rem;
+    width: 4rem;
+    margin:0;
+    padding:0;
+}
+#TextLogo{
+    text-decoration: none;
+	padding: 1rem 2vw;
+    padding-left: 0;
+    margin:0;
+	display: inline-block;
+	color: #40513B;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 2rem;
+    justify-content: flex-start;
+    
+   
+}
+nav ol li a{
+	text-decoration: none;
+	padding: 1.5rem 2vw;
+	display: inline-block;
+	color: #40513B;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 1.2rem;
+    justify-content: space-evenly;
+
+}
+nav ol li a:hover{
+	background-color: #40513B;
+	color: #EDF1D6;
+}
+#komunikaty{
+    background-color: #609966;
+    color:#EDF1D6;
+    min-height: 2vh;/* vh = viewport height = % wysokości okna przeglądarki */
+	/* min-height = wysokość może być większa, w zależności od zawartości */
+	padding-top: 5.5rem;
+	/*FLEX CONTAINER*/
+	display: flex;/*uruchamiamy flexbox*/
+	align-items: center;/*wyśrodkowanie na wysokość*/
+	justify-content: center;
+	
+	/*żeby menu nie najeższało na treść*/
+	scroll-margin-top:5.5rem;
+    border-bottom:  0.1rem solid #40513B ;
+
+
+
+}
+
+
+
+/* WSZYSTKIE SEKCJE */
+section{
+	min-height: 95vh;/* vh = viewport height = % wysokości okna przeglądarki */
+	/* min-height = wysokość może być większa, w zależności od zawartości */
+	padding: 0 2rem;
+	/*FLEX CONTAINER*/
+	display: flex;/*uruchamiamy flexbox*/
+	align-items: center;/*wyśrodkowanie na wysokość*/
+	justify-content: center;
+	
+	/*żeby menu nie najeższało na treść*/
+	scroll-margin-top: 5.2rem;
+}
+/* selektor class ma prefix '.' */
+.zawartosc{
+	/*background-color: red;*/
+    min-width: 1220px;
+	max-width: 1400px;
+}
+#pierwsza{
+     
+    background:url("https://www.tapeciarnia.pl/tapeciarnia_pl.php?album=25404_1473871041_9120.jpg") no-repeat center fixed;
+	background-size: cover;
+    min-height: 70vh;/* vh = viewport height = % wysokości okna przeglądarki */
+    border-bottom:  0.1rem solid #40513B ;
+
+
+}
+#pierwsza_slajdy{
+    background-color: #609966;
+    min-height: 20vh;/* vh = viewport height = % wysokości okna przeglądarki */
+    border-bottom:  0.3rem solid #40513B ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    
+}
+#pierwsza_slajdy img{
+    height: 18vh;
+    width: 15vw;
+
+}
+#druga{
+    background-color: #F9FBFA;
+    min-height: 75vh;/* vh = viewport height = % wysokości okna przeglądarki */
+
+
+}
+#druga .zawartosc{
+    display:flex;
+    
+}
+#druga .zawartosc aside{
+    height: 50%;
+    width: 30%;
+}
+#druga .zawartosc img{
+    margin-top:0px;
+     padding-top:0px;
+    height: 40rem;
+    width: 40rem;
+    border-radius: 50%;
+    border:  0.6rem solid #40513B ;
+
+}
+
+#druga .zawartosc article{
+    height: 40%;
+    width: 65%;
+    font-size: 3rem;
+    color:#a88f59;
+}
+#druga .zawartosc article h1{
+    font-size: 6rem;
+    color:#40513B;
+    font-weight: 400;
+}
+#druga .zawartosc hr{
+    border: 2px solid #40513B;
+
+}
+
+
