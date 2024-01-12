@@ -289,15 +289,17 @@ section{
 #czwarta .kolumna {
     flex: 1 1 48%;
     margin: 1rem;
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: #333;
     border-radius: 1rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+	border: 0.5rem ridge  whitesmoke;
+
 }
 
 #czwarta .kolumna h2 {
     font-size: 2.5rem;
-    color: #fff;
+    color: #fff;	
     margin-bottom: 1rem;
 }
 
@@ -313,79 +315,69 @@ section{
 	color: white;
 }
 #stopka .zawartosc{
-	border:2px solid #f95959;
+	border:1rem outset #f95959;
 	display:flex;
-	line-height: 3rem;
-	gap:2rem;
-	padding: 2rem;
+	gap:3rem;
+	padding:5rem 10rem;
 	flex-wrap: wrap;
+
 }
 
 #stopka .zawartosc .kolumnyStopka{
 	flex: 1 1 200px;
-	font-size:1.5rem;
-	font-size:2rem;
-	line-height: 3rem;
-	
-	margin:1.5rem;
-}
-#formularzStopka{
-		
-}
-#stopka .zawartosc ul{
+	margin:0.5rem;
+	padding:1rem;
+	width:20vw;
 	
 }
-#stopka .zawartosc #linkiStopka ul{
-
-}
-#stopka .links_footer{
-	
-} 
-
-.links_footer{
-	height: 6rem;
-	width: 6rem;
-}
-
-.ikony_dane{
-	height:2rem;
-	width:2rem;
-}
-
-#stopka .naglowki_stopka{
-	font-weight: 900;
+#stopka .zawartosc .kolumnyStopka li
+{
 	font-size:2.5rem;
+	font-weight: 500;
+	margin: 1rem 0 1rem 0;
+	padding:1rem 0 1rem 0;
+	width: 100%;
 }
-#stopka .zgody{
-	font-size:1rem;
-	letter-spacing: 0.05rem;
-	display:inline-block;
+#stopka h1
+{	
+	font-size:4rem;
+	font-weight: 900;
+	text-align: center;
+
+}
+#stopka .naglowki_stopka li img
+{
+background-color: white;
+margin-left: auto;
+margin-right: auto;
+}
+.ikony_dane{
+	height:3rem;
+	width:3rem;
+}
+
+#linkiStopka li{
+	text-align: center;
+}
+.links_footer{
+	height: 7.5rem;
+	width: 7.5rem;
 	
 }
-.zgody:hover{
-	color:red;
+#stopka .zawartosc hr{
+	border:0.1rem solid #f95959;
 }
-form input[type=checkbox]{
-	width:1.5rem;
-	height: 1.5rem;
-}
-form{
-	line-height: 3rem;
-	
-}
+/*formularz*/
 form  input{
-	display:inline-block;
-	width:auto;
-	height: 1.5rem;
-	background-color:#e3e3e3;
-
-
+	margin-top:1.5rem;
+	width:100%;
+	height: 4rem;
+	background-color:#233142;
+	padding:1rem;
+	color:whitesmoke;
+	border:0.3rem solid #f95959;
 }
-form select{
-	width: 10rem;
-	height: 2rem;
-	background-color:#e3e3e3;
-}
+
 form  input:focus{
 	outline: 0;
 	background-color: rgb(144, 141, 141);
@@ -394,37 +386,62 @@ form  input:focus{
 	
 }
 ::placeholder{
-	color:black;
+	color:whitesmoke;
 	font-weight: 200;
 
 }
-form textarea{
-	border-radius: 1rem;
-	background-color:#e3e3e3;
+form select{
+	margin-top:1.5rem;
+	width: 100%;
+	height: 4rem;
+	color:whitesmoke;
+	background-color:#233142;
+	border:0.3rem solid #f95959;
 
 }
+form textarea{
+	margin-top:1.5rem;
+	width: 100%;
+	height: 4rem;
+	color:whitesmoke;
+	background-color:#233142;
+	border:0.3rem solid #f95959;
+
+}
+
 form textarea:focus{
-	outline: 0;
-	background-color: rgb(141, 144, 144);
-	transform:scale(1.1);
+	transform:scale(1.15);
 	border-radius: 1rem;
-	color: black;
+	color: whitesmoke;
+	outline: 0;
+	padding-bottom: 0;
+	margin-bottom:0;
+}
+form input[type=checkbox]{
+	margin-top:1rem;
+	width:2rem;
+	height: 2rem;
+}
+#stopka .zgody{
+	font-size:1.5rem;
+	font-weight: 300;
+	color:whitesmoke;
+}
+#stopka .zgody:hover{
+	color:#f95959;
 }
 
 form  input[type=reset],form  input[type=submit]{
-	color:blueviolet;
-	border:0;
+	border:0.25rem solid #f95959;
 	border-radius: 1rem;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 900;
 	cursor:pointer;
-	font-size:1.2rem;
-	padding:0 0.5rem 1rem 0.5rem;
-	width: auto;
-	
+	font-size:1rem;
+	margin:2rem;
+	scale:1.5;
+	width:auto;	
 }
-
-
 
 form  input[type=submit]:hover{
 	background-color: green;
@@ -473,33 +490,32 @@ form  input[type=reset]:hover{
 
 		
 	}
+	#stpoka img{
+		display:block;
+	}
 	#stopka .zawartosc{
+		font-size:3rem;
 		width: 100%;
 		display:block;
-		margin:1rem;
 		border: none;
-		text-align: center;;
-
-		
-		
+		text-align: center;
+		justify-content: center;
+	
 	}
 	
 	#stopka .zawartosc .kolumnyStopka{
-		font-size:2rem;
-		margin-left:auto;
-		margin-right:auto;
-
+		text-align: center;
+		width: 100%;
 	}
 	#formularzStopka{
 			
 	}
+
 	#stopka .zawartosc ul{
 		
-		text-align: left;
 		
 	}
 	#stopka .zawartosc #linkiStopka ul{
-		text-align: center;
 	
 	}
 	#stopka .links_footer{
