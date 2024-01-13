@@ -17,9 +17,10 @@
             <li><span id="TextLogo">ILEX</span></li>
 			<li><a href="#pierwsza">STRONA GŁÓWNA</a></li>
 			<li><a href="#druga">O NAS</a></li>
+			<li><a href="#szosta">DlACZEGO MY</a></li>
 			<li><a href="#trzecia">OFERTA</a></li>
             <li><a href="#czwarta">GALERIA</a></li>
-            <li><a href="#formularz">KONTAKT</a></li>
+            <li><a href="#stopka">KONTAKT</a></li>
 		</ol>
 	</nav>
     <div id="komunikaty">
@@ -58,6 +59,26 @@
 		</div>
 	</section>
 	<section id="szosta">
+
+		<h1>Dlaczego my</h1>
+		<div id="config-display">
+		<div id="szosta-tresc">
+			<ul>
+				<h2>Wybierz nas jeżeli stawiasz na:</h2>
+				<li>Niezawodność</li>
+				<li>Staranność</li>
+				<li>Dokładność</li>
+				<li>Dokładność</li>
+				<li>Dokładność</li>
+				<li>Dokładność</li>
+				<li>Dokładność</li>
+				<li>Dokładność</li>
+				<li>Niezawodność</li>
+
+			</ul>
+		</div>
+		<div id="szostazdj">
+			
 		<div class="gallery">
 			<input type="checkbox" >
 			<img src="https://picsum.photos/id/1028/300/300" alt="a forest after an apocalypse">
@@ -69,6 +90,8 @@
 			<img src="https://picsum.photos/id/110/300/300" alt="a cool landscape">
 			<img src="https://picsum.photos/id/1047/300/300" alt="inside a town between two big buildings">
 		  </div>
+		</div>
+	</div>
 	
 </section>
 	<section id="trzecia">
@@ -263,15 +286,81 @@
 		</div>
 		
     </section>
-    <section id="formularz">
-		<div class="zawartosc">
-
+    <section id="stopka" class="wrapper">
+		<div class="zawartosc" class="box">
+			<article>
+				<h6>Kontakt</h6>
+				<ul>
+					<li>
+						<strong>Adres:</strong>
+						ul. Newelska 6,<br>
+						01-447 Warszawa</li>
+					<li><strong>Telefon:</strong><a href="callto:+48228434343">+48 22 843 43 43</a></li>
+					<li><strong>E-mail:</strong><a href="mailto:ubi@wit.edu.pl">ubi@wit.edu.pl</a></li>
+				</ul>
+			</article>
+			<hr>
+			<article>
+				<h6>Napisz do nas!</h6>
+				<form>
+					<input type="text" placeholder="Imię" required>
+					<input type="email" placeholder="Email" required>
+					<input type="text" placeholder="Opis sprawy" required>
+					<input type="checkbox" id="zapisz" required>
+					<label for="zapisz">Zapisz hasło.</label>
+					<br>
+					<input type="reset" value="zeruj">
+					<input type="submit" value="wyślij">
+					
+				</form>
+			</article>
 		</div>
 	</section>
-	<div id="stopka">
+	<div id="footer">
 		All rights reserved by ILEX company &#169
 	</div>
 	
 	
 </body>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+	  var sekcjaPierwsza = document.getElementById("pierwsza");
+	  var zdjecia = document.querySelectorAll("#pierwsza img");
+	  var indeksZdjecia = 0;
+  
+	  // Funkcja do zmiany tła
+	  function zmienTlo(event) {
+		var kliknieteZdjecie = event.target;
+		var noweTlo = kliknieteZdjecie.getAttribute("src");
+  
+		sekcjaPierwsza.style.backgroundImage = "url('" + noweTlo + "')";
+		resetujTimerAutomatycznejZmianyTla();
+	  }
+  
+	  // Funkcja do zmiany tła automatycznie co 10 sekund
+	  function automatycznaZmianaTla() {
+		indeksZdjecia = (indeksZdjecia + 1) % zdjecia.length;
+		var noweTlo = zdjecia[indeksZdjecia].getAttribute("src");
+		sekcjaPierwsza.style.backgroundImage = "url('" + noweTlo + "')";
+	  }
+  
+	  // Resetuje timer automatycznej zmiany tła
+	  function resetujTimerAutomatycznejZmianyTla() {
+		clearInterval(timerAutomatycznejZmianyTla);
+		timerAutomatycznejZmianyTla = setInterval(automatycznaZmianaTla, 10000);
+	  }
+  
+	  // Dodaj obsługę kliknięcia na poszczególne zdjęcia
+	  zdjecia.forEach(function(zdjecie) {
+		zdjecie.addEventListener("click", function(event) {
+		  zmienTlo(event);
+		  indeksZdjecia = Array.from(zdjecia).indexOf(event.target);
+		});
+	  });
+  
+	  // Uruchom funkcję automatycznej zmiany tła co 10 sekund
+	  var timerAutomatycznejZmianyTla = setInterval(automatycznaZmianaTla, 10000);
+	});
+  </script>
+  
 </html>

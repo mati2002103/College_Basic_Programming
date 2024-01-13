@@ -13,6 +13,7 @@ html{
 body{
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.6rem;
+	overflow-x: hidden;
 }
 /* NAWIGACJA Desktop */
 nav{
@@ -171,8 +172,6 @@ section{
 
 }
 
-
-
 #druga .zawartosc article{
     height: 40%;
     width: 65%;
@@ -196,15 +195,64 @@ section{
 
 #szosta{
 	margin: 0;
-	min-height: 70vh;
-	display: grid;
-	place-content: center;
+	min-height: 80vh;
 	background-image: linear-gradient(#333, #464c44);
+	justify-content: center;
+	text-align: center;
+	display: block;
 
   }
+  #szosta #config-display{
+	display:flex;
+	justify-content: center;
+	height: 70vh;
+	margin-left:auto;
+	margin-right: auto;
+
+}
+  #szosta h1{
+	display:inline-block;
+	font-size:8rem;
+	color:#F9FBFA;
+	font-weight: 500;
+	margin:2rem 2rem 2rem 2rem;
+	width: 100%;
+
+  }
+  #szosta #szosta-tresc
+  {
+	display: inline-block;
+	color: #F9FBFA;
+	padding:5rem;
+	border:0.5rem solid #F9FBFA;
+	border-radius:0.1rem;
+	width: 30vw;
+	height: 70%;
+	margin-top:10vh;
+	
+  }
+  #szosta #szosta-tresc h2{
+	text-align:left;
+	font-size: 2.5rem;
+  }
+
+  
+#szostazdj
+{
+	display: inline-block;
+	justify-content: center;
+	height:100%;
+	margin-left: auto;
+	margin-right: auto;
+	
+	padding-top:30vh;
+	padding-bottom:40vh;
+}
+
 /*Tutaj zaczyna się ten nowy skrypt*/
 .gallery {
-	--s: 200px; /* control the size of the images*/
+	
+	--s: 150px; /* control the size of the images*/
 	
 	display: grid;
 	gap: 5px;
@@ -487,14 +535,106 @@ section{
 	background-image: linear-gradient(#333, #464c44);
 
 }
-#stopka
+#footer
 {
-background-color: #464c44;
-height: 3vh;
+background-color: #333;
+height: 2vh;
 width: 100%;
 color: white;
 text-align: center;
 }
+
+/* Formularz */
+#stopka{
+	background-color: #333;
+	color: white;
+	padding: 5vw;
+}
+#stopka .zawartosc{
+	border: 1px solid rgba(0,0,0,0.2);
+	display: flex;
+	gap: 5vw;
+	padding: 7vw;
+	width: 70vw;
+	box-shadow: 0 0 4rem rgba(0,0,0,.3);
+	border-radius: 2rem;
+}
+#stopka article{
+	flex: 1;
+	line-height: 2rem;
+	font-size: 1.4rem;
+}
+#stopka article h6{
+	font-size: 3rem;
+	font-weight: 200;
+	color: #999;
+	margin-bottom: 3vh;
+}
+#stopka article ul{}
+#stopka article ul li{
+	padding-bottom: 2rem;
+}
+#stopka article ul li strong{
+	display: block;
+	padding-bottom: .5rem;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #999;
+}
+#stopka article ul li a{
+	color: #fff;
+	text-decoration: none;
+}
+#stopka article ul li a:hover{}
+#stopka article form{}
+#stopka article form input{
+	background: none;
+	border: 0;
+	border-bottom: 1px #666 solid;
+	margin-bottom: 1rem;
+	padding: .5rem 0;
+	font-family: inherit;
+	font-size: 1.2rem;
+	width: 100%;
+	box-sizing: border-box;
+	color: white;
+	font-weight: 600;
+}
+#stopka article form input:focus{
+	outline: 0;
+	transform: scale(1.1);
+	border-bottom: 1px solid white;
+}
+#stopka article form input[type=checkbox]{
+	width: auto;
+}
+#stopka article form label{
+	font-size: 1rem;
+	display: inline-block;
+	transform: translateY(-.25rem);
+}
+#stopka article form input[type=reset],
+#stopka article form input[type=submit]{
+	border: 0;
+	color: #ccc;
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 1rem;
+	display: inline-block;
+	margin-right: 2rem;
+	cursor: pointer;
+	margin-top: 1rem;
+	width: auto;
+}
+#stopka article form input[type=reset]:hover{
+	color: orange;
+}
+#stopka article form input[type=submit]:hover{
+	color: cornflowerblue;
+}
+
+
 
 
   
