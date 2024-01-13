@@ -358,7 +358,7 @@ section{
 
 	margin: 0;
 	padding: 1rem;
-	min-height: 90vh;
+	min-height: 120vh;
 	
 	
 	
@@ -392,6 +392,7 @@ section{
 	aspect-ratio: 1 / 1;
 	object-fit: cover;
 	transition: transform 1000ms;
+	border-radius: 1rem;
 }
 
 #czwarta ul {
@@ -483,8 +484,16 @@ section{
 }
 
 #formularz{
-	/*background-image: linear-gradient(#333, #464c44);*/
+	background-image: linear-gradient(#333, #464c44);
 
+}
+#stopka
+{
+background-color: #464c44;
+height: 3vh;
+width: 100%;
+color: white;
+text-align: center;
 }
 
 
