@@ -29,11 +29,11 @@
 	
 	<section id="pierwsza">
 		<div class="zawartosc">
-			<img src="https://th.bing.com/th/id/OIG.uFhoLKlnzMNWGsybhWOT?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn">
-            <img src="https://th.bing.com/th/id/OIG.CdWX2AmL4WSZNeaCCqs9?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn">
-            <img src="https://th.bing.com/th/id/OIG.dowSFZ57R621Tss4YQXw?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn">
-            <img src="https://th.bing.com/th/id/OIG.5uT9r2yM75AcGSfGFtmW?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn">
-            <img src="https://th.bing.com/th/id/OIG.88Qsr7lvjBACG3a5Qh1T?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn">
+			<img src="https://th.bing.com/th/id/R.9760aaa63f46e67d4d3ac7d066b15eef?rik=NSo3dCAHcQayTQ&riu=http%3a%2f%2fwww.e-tapetki.pl%2ftapetki%2fduze%2f264505_staw-ogrod-japonia.jpg&ehk=w2bD%2bb0SVjXtUnXzCg49voHNuDHmZFBHOXOzD319hxc%3d&risl=&pid=ImgRaw&r=0">
+            <img src="https://www.mojpieknyogrod.pl/uploads/media/default/0001/11/ogrod-wiosna.jpeg">
+            <img src="https://www.hdwallpapers.in/download/beautiful_garden_green_grass_field_trees_plants_bushes_colorful_flowers_hd_garden-2560x1440.jpg">
+            <img src="https://th.bing.com/th/id/R.437e8d0beb485a029785bf4ba5daa890?rik=APrgVogvT6V6xA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f11%2fFull-hd-garden-hd-wallpaper-3D.jpg&ehk=MGdA%2bJ9an2LxMTlLf%2fckoUKRGM8B5pInkRkVdmoH3ac%3d&risl=&pid=ImgRaw&r=0">
+            <img src="https://th.bing.com/th/id/R.11866ca0623e127d2839972f568f7bcc?rik=ITNxhIPFbHeKbw&pid=ImgRaw&r=0">
 		</div>
 	</section>
     
@@ -334,6 +334,7 @@
 		var noweTlo = kliknieteZdjecie.getAttribute("src");
   
 		sekcjaPierwsza.style.backgroundImage = "url('" + noweTlo + "')";
+		sekcjaPierwsza.style.backgroundSize = "cover";
 		resetujTimerAutomatycznejZmianyTla();
 	  }
   
@@ -342,6 +343,7 @@
 		indeksZdjecia = (indeksZdjecia + 1) % zdjecia.length;
 		var noweTlo = zdjecia[indeksZdjecia].getAttribute("src");
 		sekcjaPierwsza.style.backgroundImage = "url('" + noweTlo + "')";
+		sekcjaPierwsza.style.backgroundSize = "cover";
 	  }
   
 	  // Resetuje timer automatycznej zmiany tła
@@ -362,5 +364,6 @@
 	  var timerAutomatycznejZmianyTla = setInterval(automatycznaZmianaTla, 10000);
 	});
   </script>
+  
   
 </html>
