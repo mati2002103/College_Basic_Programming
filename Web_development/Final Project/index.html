@@ -6,7 +6,79 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	
+	<style>
+        /* Dodany styl dla powiększonych zdjęć */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+			scale:1.3;
+            margin: auto;
+            display: block;
+            margin-top:20vh;
+
+            width: 80%;
+
+			min-height: 60vh;
+            max-height: 60vh;
+            max-width: 700px;
+            position: relative;
+			background-color: green;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: 60vh;
+        }
+
+        .modal-close {
+            position: absolute;
+			z-index: 9999;
+            cursor: pointer;
+            color: #fff;
+            font-size: 3rem;
+			font-weight: 900;
+			text-align: center;
+			background-color: red;
+			width: 3rem;
+			height: 3rem;
+			
+        }
+		
+
+        .modal-navigation {
+            position: absolute;
+			top:50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            color: #fff;
+			height: 60vh;
+        }
+
+        .modal-navigation button {
+            background: rgba(255, 255, 255, 0.293);
+			border:0;
+            font-size: 2rem;
+            cursor: pointer;
+			color: white;
+			height: 100%;
+			width: 3rem;
+
+        }
+    </style>
 </head>
 
 <body>
@@ -22,11 +94,7 @@
             <li><a href="#czwarta">GALERIA</a></li>
             <li><a href="#stopka">KONTAKT</a></li>
 		</ol>
-	</nav>
-    <div id="komunikaty">
-        <p>halo halo dzisiaj zamkniete, próba raz dwa trzy</p>
-    </div>
-	
+	</nav>	
 	<section id="pierwsza">
 		<div class="zawartosc">
 			<img src="https://th.bing.com/th/id/R.9760aaa63f46e67d4d3ac7d066b15eef?rik=NSo3dCAHcQayTQ&riu=http%3a%2f%2fwww.e-tapetki.pl%2ftapetki%2fduze%2f264505_staw-ogrod-japonia.jpg&ehk=w2bD%2bb0SVjXtUnXzCg49voHNuDHmZFBHOXOzD319hxc%3d&risl=&pid=ImgRaw&r=0">
@@ -60,20 +128,18 @@
 	</section>
 	<section id="szosta">
 
-		<h1>Dlaczego my</h1>
 		<div id="config-display">
 		<div id="szosta-tresc">
 			<ul>
-				<h2>Wybierz nas jeżeli stawiasz na:</h2>
-				<li>Niezawodność</li>
-				<li>Staranność</li>
-				<li>Dokładność</li>
-				<li>Dokładność</li>
-				<li>Dokładność</li>
-				<li>Dokładność</li>
-				<li>Dokładność</li>
-				<li>Dokładność</li>
-				<li>Niezawodność</li>
+				<ul>
+					<h2>Wybierz nas, jeżeli oczekujesz:</h2>
+					<li><strong>Niezawodności:</strong> Jesteśmy solidnym partnerem od 2001 roku, dostarczając usługi najwyższej jakości.</li>
+					<li><strong>Staranności:</strong> Dbamy o każdy detal, zarówno w projektowaniu, jak i pielęgnacji ogrodów, zapewniając perfekcyjne efekty.</li>
+					<li><strong>Dokładności:</strong> Nasze projekty są precyzyjnie opracowywane, a prace realizacyjne wykonujemy z największą dokładnością.</li>
+					<li><strong>Innowacyjnego podejścia:</strong> Stawiamy na nowoczesne rozwiązania w architekturze krajobrazu, śledząc najnowsze trendy.</li>
+					<li><strong>Wsparcia na lata:</strong> Nie tylko projektujemy piękne ogrody, ale także zapewniamy fachową opiekę i regularne prace pielęgnacyjne.</li>
+					<li><strong>Indywidualnego podejścia:</strong> Dostosowujemy nasze usługi do unikalnych potrzeb każdego klienta.</li>
+				</ul>
 
 			</ul>
 		</div>
@@ -174,18 +240,18 @@
 	<section id="czwarta">
 		
 		<h1>Galeria</h1>
-		<div class="zawartosc">
-			<ul>
+        <div class="zawartosc">
+            <ul>
+                <li>
+                    <a onclick="openModal('https://images.unsplash.com/photo-1631451095765-2c91616fc9e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA0OTI3Nw&ixlib=rb-1.2.1&q=80&w=800')" style="cursor: pointer;">
+                        <figure>
+                            <img id="test" src='https://images.unsplash.com/photo-1631451095765-2c91616fc9e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA0OTI3Nw&ixlib=rb-1.2.1&q=80&w=400' alt='Volcano and lava field against a stormy sky' class="project__image">
+                            <figcaption>Mountains and volcanos</figcaption>
+                        </figure>
+                    </a>
+                </li>
 				<li>
-					<a>
-						<figure>
-							<img id="test" src='https://images.unsplash.com/photo-1631451095765-2c91616fc9e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA0OTI3Nw&ixlib=rb-1.2.1&q=80&w=400' alt='Volcano and lava field against a stormy sky' class="project__image">
-							<figcaption>Mountains and volcanos</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a>
+					<a onclick="openModal('https://images.unsplash.com/photo-1633621533308-8760aefb5521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjAyMQ&ixlib=rb-1.2.1&q=80&w=400')" style="cursor: pointer;">
 						<figure>
 							<img src='https://images.unsplash.com/photo-1633621533308-8760aefb5521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjAyMQ&ixlib=rb-1.2.1&q=80&w=400' alt='Guy on a bike ok a wooden bridge with a forest backdrop' class="project__image">
 							<figcaption>Adventure getaways</figcaption>
@@ -286,18 +352,101 @@
 		</div>
 		
     </section>
+	
+    <div id="myModal" class="modal">
+		
+        <div class="modal-content">
+            <div class="modal-navigation">
+				<span class="modal-close" onclick="closeModal()">&times;</span>
+
+                <button onclick="showPrevImage()">&#5130;</button>
+                <button onclick="showNextImage()">&#5125;</button>
+            </div>
+            <img id="modal-image" src="" alt="Powiększone zdjęcie">
+        </div>
+    </div>
+	<script>
+		// Pobierz elementy z galerii
+		var galleryImages = document.querySelectorAll("#czwarta img");
+		var modal = document.getElementById("myModal");
+		var modalImage = document.getElementById("modal-image");
+		var currentImageIndex = 0;
+		function closeModal() {
+		modal.style.display = "none";
+		}
+		// Funkcja obsługująca kliknięcie na zdjęcie
+		function openModal(imageSrc) {
+			modal.style.display = "block";
+			modalImage.src = imageSrc;
+		}
+	
+		// Funkcja obsługująca zamknięcie modala
+		function closeModal() {
+			modal.style.display = "none";
+		}
+	
+		// Dodaj obsługę kliknięcia na poszczególne zdjęcia w galerii
+		galleryImages.forEach(function (image) {
+			image.addEventListener("click", function () {
+				openModal(image.src);
+			});
+		});
+	
+		// Dodaj obsługę zamknięcia modala
+		modal.addEventListener("", function () {
+			closeModal();
+		});
+	
+		// Dodaj obsługę klawisza Escape do zamknięcia modala
+		document.addEventListener("keydown", function (event) {
+			if (event.key === "Escape") {
+				closeModal();
+			}
+		});
+		function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            var nextImageSrc = galleryImages[currentImageIndex].getAttribute("src");
+            modalImage.src = nextImageSrc;
+        }
+
+        function showPrevImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            var prevImageSrc = galleryImages[currentImageIndex].getAttribute("src");
+            modalImage.src = prevImageSrc;
+        }
+		document.addEventListener("DOMContentLoaded", function () {
+
+		document.addEventListener("keydown", function (event) {
+            if (event.key === "ArrowRight") {
+                showNextImage();
+            } else if (event.key === "ArrowLeft") {
+                showPrevImage();
+            }
+        });
+    });
+		
+	</script>	
+	
     <section id="stopka" class="wrapper">
 		<div class="zawartosc" class="box">
 			<article>
 				<h6>Kontakt</h6>
 				<ul>
+					
 					<li>
-						<strong>Adres:</strong>
-						ul. Newelska 6,<br>
-						01-447 Warszawa</li>
-					<li><strong>Telefon:</strong><a href="callto:+48228434343">+48 22 843 43 43</a></li>
-					<li><strong>E-mail:</strong><a href="mailto:ubi@wit.edu.pl">ubi@wit.edu.pl</a></li>
+						<strong><img src="img/map.png" height="13rem" width="13rem"> Adres:</strong>
+						ul. Jaśminowa 13,<br>
+						33-555 Paris
+					</li>
+					<li><strong><img src="img/phone-call.png" height="13rem" width="13rem"> Telefon:</strong><a href="callto:+48228434343">+48 333 555 666</a></li>
+					<li><strong><img src="img/email.png" height="13rem" width="13rem"> E-mail:</strong><a href="mailto:ubi@wit.edu.pl">Ilex@gmail.com</a></li>
 				</ul>
+			</article>
+			<hr>
+			<article>
+				<h6>Znajdź nas</h6>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.388747239786!2d2.342557151850943!3d48.85079697878864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671e74e164087%3A0xe1778e717dc0efdc!2s2%20Rue%20de%20Cluny%2C%2075005%20Paris%2C%20France!5e0!3m2!1sen!2spl!4v1705193648647!5m2!1sen!2spl" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 			</article>
 			<hr>
 			<article>
@@ -305,9 +454,10 @@
 				<form>
 					<input type="text" placeholder="Imię" required>
 					<input type="email" placeholder="Email" required>
-					<input type="text" placeholder="Opis sprawy" required>
+					<input type="tel" placeholder="Numer telefonu" required>
+					<input type="textarea" placeholder="Wiadomość" required rows="5" cols="33">
+					<label for="zapisz">Zgoda na przetwarzanie danych osobowych</label>
 					<input type="checkbox" id="zapisz" required>
-					<label for="zapisz">Zapisz hasło.</label>
 					<br>
 					<input type="reset" value="zeruj">
 					<input type="submit" value="wyślij">
