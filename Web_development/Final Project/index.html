@@ -82,6 +82,27 @@
 </head>
 
 <body>
+	<!--	Nawigacja mobile     -->
+
+	<div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+						<li><a href="#pierwsza">STRONA GŁÓWNA</a></li>
+						<li><a href="#druga">O NAS</a></li>
+						<li><a href="#szosta">DlACZEGO MY</a></li>
+						<li><a href="#trzecia">OFERTA</a></li>
+						<li><a href="#czwarta">GALERIA</a></li>
+						<li><a href="#stopka">KONTAKT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
 	<!--	Nawigacja DESKTOP     -->
 	<nav>
 		<ol>
@@ -95,6 +116,10 @@
             <li><a href="#stopka">KONTAKT</a></li>
 		</ol>
 	</nav>	
+	<section id="pierwszaMobile">
+		<img src="img/_dc9bd8bb-6f04-446e-96b5-0446245d6136.jfif">
+	</section>
+    
 	<section id="pierwsza">
 		<div class="zawartosc">
 			<img src="https://th.bing.com/th/id/R.9760aaa63f46e67d4d3ac7d066b15eef?rik=NSo3dCAHcQayTQ&riu=http%3a%2f%2fwww.e-tapetki.pl%2ftapetki%2fduze%2f264505_staw-ogrod-japonia.jpg&ehk=w2bD%2bb0SVjXtUnXzCg49voHNuDHmZFBHOXOzD319hxc%3d&risl=&pid=ImgRaw&r=0">
@@ -133,12 +158,12 @@
 			<ul>
 				<ul>
 					<h2>Wybierz nas, jeżeli oczekujesz:</h2>
-					<li><strong>Niezawodności:</strong> Jesteśmy solidnym partnerem od 2001 roku, dostarczając usługi najwyższej jakości.</li>
-					<li><strong>Staranności:</strong> Dbamy o każdy detal, zarówno w projektowaniu, jak i pielęgnacji ogrodów, zapewniając perfekcyjne efekty.</li>
-					<li><strong>Dokładności:</strong> Nasze projekty są precyzyjnie opracowywane, a prace realizacyjne wykonujemy z największą dokładnością.</li>
-					<li><strong>Innowacyjnego podejścia:</strong> Stawiamy na nowoczesne rozwiązania w architekturze krajobrazu, śledząc najnowsze trendy.</li>
-					<li><strong>Wsparcia na lata:</strong> Nie tylko projektujemy piękne ogrody, ale także zapewniamy fachową opiekę i regularne prace pielęgnacyjne.</li>
-					<li><strong>Indywidualnego podejścia:</strong> Dostosowujemy nasze usługi do unikalnych potrzeb każdego klienta.</li>
+					<li><strong>Niezawodności:</strong><br> Jesteśmy solidnym partnerem od 2001 roku, dostarczając usługi najwyższej jakości.</li>
+					<li><strong>Staranności:</strong><br>  Dbamy o każdy detal, zarówno w projektowaniu, jak i pielęgnacji ogrodów, zapewniając perfekcyjne efekty.</li>
+					<li><strong>Dokładności:</strong><br>  Nasze projekty są precyzyjnie opracowywane, a prace realizacyjne wykonujemy z największą dokładnością.</li>
+					<li><strong>Innowacyjnego podejścia:</strong><br>  Stawiamy na nowoczesne rozwiązania w architekturze krajobrazu, śledząc najnowsze trendy.</li>
+					<li><strong>Wsparcia na lata:</strong><br>  Nie tylko projektujemy piękne ogrody, ale także zapewniamy fachową opiekę i regularne prace pielęgnacyjne.</li>
+					<li><strong>Indywidualnego podejścia:</strong><br>  Dostosowujemy nasze usługi do unikalnych potrzeb każdego klienta.</li>
 				</ul>
 
 			</ul>
@@ -146,7 +171,7 @@
 		<div id="szostazdj">
 			
 		<div class="gallery">
-			<input type="checkbox" >
+			<input type="checkbox">
 			<img src="https://picsum.photos/id/1028/300/300" alt="a forest after an apocalypse">
 			<img src="https://picsum.photos/id/15/300/300" alt="a waterfall and many rocks">
 			<img src="https://picsum.photos/id/1040/300/300" alt="a house on a mountain">
@@ -259,7 +284,7 @@
 					</a>
 				</li>
 				<li>
-					<a>
+					<a onclick="openModal('https://images.unsplash.com/photo-1633621533308-8760aefb5521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjAyMQ&ixlib=rb-1.2.1&q=80&w=400')" style="cursor: pointer;">
 						<figure>
 							<img src='https://images.unsplash.com/photo-1633635146842-12d386e64058?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjA5OA&ixlib=rb-1.2.1&q=80&w=400' alt='Person standing alone in a misty forest' class="project__image">
 							<figcaption>Forest escapes</figcaption>
@@ -267,7 +292,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a onclick="openModal('https://images.unsplash.com/photo-1633621533308-8760aefb5521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjAyMQ&ixlib=rb-1.2.1&q=80&w=400')" style="cursor: pointer;">
 						<figure>
 							<img src='https://images.unsplash.com/photo-1568444438385-ece31a33ce78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjA5OA&ixlib=rb-1.2.1&q=80&w=400' alt='Person hiking on a trail through mountains while taking a photo with phone'>
 							<figcaption>Hiking trails</figcaption>
@@ -275,7 +300,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a onclick="openModal('https://images.unsplash.com/photo-1633621533308-8760aefb5521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjAyMQ&ixlib=rb-1.2.1&q=80&w=400')" style="cursor: pointer;">
 						<figure>
 							<img src='https://images.unsplash.com/photo-1633515257379-5fda985bd57a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjA5OA&ixlib=rb-1.2.1&q=80&w=400' alt='Street scene with person walking and others on motorbikes, all wearing masks'>
 							<figcaption>Street scenes</figcaption>
@@ -283,7 +308,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a onclick="openModal('https://images.unsplash.com/photo-1633621533308-8760aefb5521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjAyMQ&ixlib=rb-1.2.1&q=80&w=400')" style="cursor: pointer;">
 						<figure>
 							<img src='https://images.unsplash.com/photo-1633209931146-260ce0d16e22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjA5OA&ixlib=rb-1.2.1&q=80&w=400' alt='Fashionable-looking girl with blond hair and pink sunglasses'>
 							<figcaption>Trending</figcaption>
@@ -291,47 +316,47 @@
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a onclick="openModal('https://th.bing.com/th/id/OIG.3_0LgmES8T.AZvFXjKdi?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn')" style="cursor: pointer;">
 						<figure>
-							<img src='https://images.unsplash.com/photo-1633209931146-260ce0d16e22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjA5OA&ixlib=rb-1.2.1&q=80&w=400' alt='Fashionable-looking girl with blond hair and pink sunglasses'>
+							<img src='https://th.bing.com/th/id/OIG.3_0LgmES8T.AZvFXjKdi?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn' alt='Fashionable-looking girl with blond hair and pink sunglasses'>
 							<figcaption>Trending</figcaption>
 						</figure>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a onclick="openModal('https://th.bing.com/th/id/OIG.2KlCoTUXljHsOgs7O4H9?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn')" style="cursor: pointer;">
 						<figure>
-							<img src='https://images.unsplash.com/photo-1633209931146-260ce0d16e22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjA5OA&ixlib=rb-1.2.1&q=80&w=400' alt='Fashionable-looking girl with blond hair and pink sunglasses'>
+							<img src='https://th.bing.com/th/id/OIG.2KlCoTUXljHsOgs7O4H9?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn' alt='Fashionable-looking girl with blond hair and pink sunglasses'>
 							<figcaption>Trending</figcaption>
 						</figure>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a onclick="openModal('https://th.bing.com/th/id/OIG.0jzkF5VEoqWJ7saaNp0Q?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn')" style="cursor: pointer;">
 						<figure>
-							<img src='https://images.unsplash.com/photo-1633209931146-260ce0d16e22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjA5OA&ixlib=rb-1.2.1&q=80&w=400' alt='Fashionable-looking girl with blond hair and pink sunglasses'>
+							<img src='https://th.bing.com/th/id/OIG.0jzkF5VEoqWJ7saaNp0Q?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn' alt='Fashionable-looking girl with blond hair and pink sunglasses'>
 							<figcaption>Trending</figcaption>
 						</figure>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a onclick="openModal('https://th.bing.com/th/id/OIG.kA2DxEWk4g6IYYICyNw1?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn')" style="cursor: pointer;">
 						<figure>
-							<img src='https://images.unsplash.com/photo-1633209931146-260ce0d16e22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjA5OA&ixlib=rb-1.2.1&q=80&w=400' alt='Fashionable-looking girl with blond hair and pink sunglasses'>
+							<img src='https://th.bing.com/th/id/OIG.kA2DxEWk4g6IYYICyNw1?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn' alt='Fashionable-looking girl with blond hair and pink sunglasses'>
 							<figcaption>Trending</figcaption>
 						</figure>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a onclick="openModal('https://th.bing.com/th/id/OIG.3DyXQDlakuGQpagRVbpv?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn')" style="cursor: pointer;">
 						<figure>
-							<img src='https://images.unsplash.com/photo-1633209931146-260ce0d16e22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjA5OA&ixlib=rb-1.2.1&q=80&w=400' alt='Fashionable-looking girl with blond hair and pink sunglasses'>
+							<img src='https://th.bing.com/th/id/OIG.3DyXQDlakuGQpagRVbpv?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn' alt='Fashionable-looking girl with blond hair and pink sunglasses'>
 							<figcaption>Trending</figcaption>
 						</figure>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a onclick="openModal('https://images.unsplash.com/photo-1633621533308-8760aefb5521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzNDA1MjAyMQ&ixlib=rb-1.2.1&q=80&w=400')" style="cursor: pointer;">
 						<figure>
 							<img src='https://th.bing.com/th/id/OIG.3_0LgmES8T.AZvFXjKdi?w=270&h=270&c=6&r=0&o=5&dpr=1.4&pid=ImgGn' >
 							<figcaption>Trending</figcaption>
@@ -366,6 +391,7 @@
         </div>
     </div>
 	<script>
+		
 		// Pobierz elementy z galerii
 		var galleryImages = document.querySelectorAll("#czwarta img");
 		var modal = document.getElementById("myModal");
@@ -473,6 +499,8 @@
 	
 </body>
 <script>
+	
+	
 	document.addEventListener("DOMContentLoaded", function() {
 	  var sekcjaPierwsza = document.getElementById("pierwsza");
 	  var zdjecia = document.querySelectorAll("#pierwsza img");
