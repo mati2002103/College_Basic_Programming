@@ -23,36 +23,29 @@
         }
 
         .modal-content {
-			scale:1.3;
+			scale:1;
             margin: auto;
             display: block;
-            margin-top:20vh;
-
-            width: 80%;
-
-			min-height: 60vh;
-            max-height: 60vh;
+            margin-top:10vh;
+			margin-bottom:10vh;
             max-width: 700px;
             position: relative;
-			background-color: green;
         }
 
         .modal-content img {
             width: 100%;
-            height: 60vh;
         }
 
         .modal-close {
             position: absolute;
-			top:-5	0px;
-			left:-50px;
+			top:-50px;
+			right:-50px;
 			z-index: 9999;
             cursor: pointer;
             color: #fff;
             font-size: 3rem;
 			font-weight: 900;
 			text-align: center;
-			background-color: red;
 			width: 3rem;
 			height: 3rem;
 			
@@ -62,12 +55,12 @@
         .modal-navigation {
             position: absolute;
 			top:50%;
+			height:100%;
             width: 100%;
             display: flex;
             justify-content: space-between;
             transform: translateY(-50%);
             color: #fff;
-			height: 60vh;
         }
 
         .modal-navigation button {
@@ -86,24 +79,31 @@
 <body>
 	<!--	Nawigacja mobile     -->
 
-	<div class="menu-wrap">
-        <input type="checkbox" class="toggler">
-        <div class="hamburger"><div></div></div>
-        <div class="menu">
-            <div>
-                <div>
-                    <ul>
-						<li><a href="#pierwsza">STRONA GŁÓWNA</a></li>
-						<li><a href="#druga">O NAS</a></li>
-						<li><a href="#szosta">DlACZEGO MY</a></li>
-						<li><a href="#trzecia">OFERTA</a></li>
-						<li><a href="#czwarta">GALERIA</a></li>
-						<li><a href="#stopka">KONTAKT</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+	<!--pełnoekranowa nakładka-->
+	<div class="nakladka" id="MENU">
+		<a href="javascript:void(0)" class="zamknijX" onClick="zamknijMenu()">&times;</a>
+		<ol>
+			<li><a href="#pierwszaMobile" onClick="zamknijMenu()">START</a></li>
+			<li><a href="#druga" onClick="zamknijMenu()">O NAS</a></li>
+			<li><a href="#trzecia" onClick="zamknijMenu()">OFERTA</a></li>
+			<li><a href="#czwarta" onClick="zamknijMenu()">GALERIA</a></li>
+			<li><a href="#stopka" onClick="zamknijMenu()">KONTAKT</a></li>
+		</ol>
+
+	</div>
+	<!--przycisk hamburger menu-->
+	<span class="burger" onClick="otworzMenu()">&#9776;</span>
+	<!--Skrypt uruchamiający menu-->
+	<script>
+		function otworzMenu(){
+			document.getElementById("MENU").style.width = "100%";
+		}
+		function zamknijMenu(){
+			document.getElementById("MENU").style.width = "0%";
+		}
+		
+
+	</script>
 
 	<!--	Nawigacja DESKTOP     -->
 	<nav>
@@ -119,16 +119,18 @@
 		</ol>
 	</nav>	
 	<section id="pierwszaMobile">
-		<img src="img/_dc9bd8bb-6f04-446e-96b5-0446245d6136.jfif">
+		<!--<img src="">-->
 	</section>
     
 	<section id="pierwsza">
 		<div class="zawartosc">
-			<img src="https://th.bing.com/th/id/R.9760aaa63f46e67d4d3ac7d066b15eef?rik=NSo3dCAHcQayTQ&riu=http%3a%2f%2fwww.e-tapetki.pl%2ftapetki%2fduze%2f264505_staw-ogrod-japonia.jpg&ehk=w2bD%2bb0SVjXtUnXzCg49voHNuDHmZFBHOXOzD319hxc%3d&risl=&pid=ImgRaw&r=0">
+			<img src="https://media.houseandgarden.co.uk/photos/6189450af6eb732bf13e47e7/16:9/w_1280,c_limit/200-105x.jpg">
             <img src="https://www.mojpieknyogrod.pl/uploads/media/default/0001/11/ogrod-wiosna.jpeg">
-            <img src="https://www.hdwallpapers.in/download/beautiful_garden_green_grass_field_trees_plants_bushes_colorful_flowers_hd_garden-2560x1440.jpg">
+            <img src="https://warsawtour.pl/wp-content/uploads/2020/08/Ogr%C3%B3d-Botaniczny-Uniwersytetu-Warszawskiego-fot.-Filip-Kwiatkowski-11.jpg">
             <img src="https://th.bing.com/th/id/R.437e8d0beb485a029785bf4ba5daa890?rik=APrgVogvT6V6xA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f11%2fFull-hd-garden-hd-wallpaper-3D.jpg&ehk=MGdA%2bJ9an2LxMTlLf%2fckoUKRGM8B5pInkRkVdmoH3ac%3d&risl=&pid=ImgRaw&r=0">
             <img src="https://th.bing.com/th/id/R.11866ca0623e127d2839972f568f7bcc?rik=ITNxhIPFbHeKbw&pid=ImgRaw&r=0">
+			<img src="https://www.turismoroma.it/sites/default/files/Roseto%20comunale_0.jpg">
+
 		</div>
 	</section>
     
@@ -159,7 +161,7 @@
 		<div id="szosta-tresc">
 			<ul>
 				<ul>
-					<h2>Wybierz nas, jeżeli oczekujesz:</h2>
+					<h1>Wybierz nas, jeżeli oczekujesz:</h1>
 					<li><strong>Niezawodności:</strong><br> Jesteśmy solidnym partnerem od 2001 roku, dostarczając usługi najwyższej jakości.</li>
 					<li><strong>Staranności:</strong><br>  Dbamy o każdy detal, zarówno w projektowaniu, jak i pielęgnacji ogrodów, zapewniając perfekcyjne efekty.</li>
 					<li><strong>Dokładności:</strong><br>  Nasze projekty są precyzyjnie opracowywane, a prace realizacyjne wykonujemy z największą dokładnością.</li>
@@ -379,7 +381,7 @@
 		</div>
 		
     </section>
-	
+	<div id="turnoffmobileModal">
     <div id="myModal" class="modal">
 		
         <div class="modal-content">
@@ -392,6 +394,7 @@
             <img id="modal-image" src="" alt="Powiększone zdjęcie">
         </div>
     </div>
+</div>
 	<script>
 		
 		// Pobierz elementy z galerii
