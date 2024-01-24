@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Nazwisko Imię OnePage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- OSADZAMY PLIKI CSS -->
+	<!-- 1. reset.css = usuwa domyślne style HTML -->
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	
+	<!-- 2. style.css = dodajemy włąsne style -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+</head>
+
+<body>
+	<!--Nawigacja Mobile-->
+	<!--pełnoekranowa nakładka-->
+	<div class="nakladka" id="MENU">
+		<a href="javascript:void(0)" class="zamknijX" onClick="zamknijMenu()">&times;</a>
+		<ol>
+			<li><a href="#pierwsza" onClick="zamknijMenu()">Pierwsza</a></li>
+			<li><a href="#druga" onClick="zamknijMenu()">Druga</a></li>
+			<li><a href="#trzecia" onClick="zamknijMenu()">Trzecia</a></li>
+			<li><a href="#czwarta" onClick="zamknijMenu()">Czwarta</a></li>
+			<li><a href="#stopka" onClick="zamknijMenu()">Stopka</a></li>
+		</ol>
+
+	</div>
+	<!--przycisk hamburger menu-->
+	<span class="burger" onClick="otworzMenu()">&#9776;</span>
+	<!--Skrypt uruchamiający menu-->
+	<script>
+		function otworzMenu(){
+			document.getElementById("MENU").style.width = "100%";
+		}
+		function zamknijMenu(){
+			document.getElementById("MENU").style.width = "0%";
+		}
+		
+
+	</script>
+
+	<!--	Nawigacja DESKTOP     -->
+	<nav>
+		<ol>
+			<li><a href="#pierwsza">Pierwsza</a></li>
+			<li><a href="#druga">Druga</a></li>
+			<li><a href="#trzecia">Trzecia</a></li>
+			<li><a href="#czwarta">Czwarta</a></li>
+			<li><a href="#stopka">Stopka</a></li>
+		</ol>
+	</nav>
+	
+	<section id="pierwsza">
+		<div class="zawartosc">
+			<div id="logo">MW</div>
+			<h1>Strona <strong>OnePage</strong></h1>
+			<a href="#druga">Dalej</a>
+		</div>
+	</section>
+	
+	<section id="druga">
+		<div class="zawartosc">
+			<article>
+				<h2><img src="ikony/html-5.png" class="icons_druga"></h2>
+				<p>
+					<b>HTML(HyperText Markup Language)</b> </br><br>Standardowy język używany do tworzenia struktur i treści stron internetowych.<br><br>
+					Jest to język oparty na znacznikach, które definiują różne elementy na stronie, takie jak nagłówki, akapity, obrazy i linki.<br></br> 
+					HTML opisuje, jak treść powinna być wyświetlana w przeglądarkach internetowych, ale nie zajmuje się aspektami graficznymi. <br><br>
+					Przeglądarki interpretują kod HTML i wyświetlają zawartość strony w formie czytelnej dla użytkownika.<br><br> Kod HTML składa się z otwierających i zamykających znaczników, które określają, jakie elementy znajdują się na stronie. 
+				</p>
+			</article>
+			
+			<article>
+				<h2><img src="ikony/css-3.png" class="icons_druga"></h2>
+				<p><b>CSS (Cascading Style Sheets)</b></br><br> Język używany do określania wyglądu i formatowania treści na stronach internetowych.<br><br> W skrócie, CSS definiuje, jak elementy HTML powinny być wyświetlane w przeglądarkach internetowych. Oto kilka kluczowych informacji na ten temat:<br><br>
+					<ol>
+					 <li>CSS jest używany do kontroli stylu stron internetowych, takich jak kolor tła, kształt czcionek, odstępy między elementami i wiele innych aspektów wizualnych.</li>
+					
+					<li>CSS działa na zasadzie kaskadowania, co oznacza, że można zdefiniować różne style dla tych samych elementów HTML w różnych miejscach i CSS zostanie zastosowany w kolejności określonej w arkuszu stylów.</li>
+					
+					<li>Arkusze stylów CSS składają się z selektorów, które określają, do których elementów HTML mają być zastosowane style, oraz deklaracji, które określają konkretne właściwości stylu.</li>
+					
+					<li>CSS pozwala na tworzenie responsywnych projektów, które dostosowują się do różnych rozmiarów ekranów, co jest istotne w erze urządzeń mobilnych.</li>
+					
+				</ol>
+				</p>
+			</article>
+			
+			<article>
+				<h2><img src="ikony/js.png" class="icons_druga"></h2>
+				<p><b>JavaScript</b></br><br>Wszechstronny język programowania używany głównie do tworzenia dynamicznych interakcji i funkcjonalności na stronach internetowych.<br><br> Jest językiem skryptowym, który może być wykonywany w przeglądarkach internetowych,
+					 co pozwala na tworzenie interaktywnych elementów na stronach, takich jak formularze, animacje czy gry.<br><br> JavaScript umożliwia dostęp do elementów i treści strony oraz ich modyfikację, co pozwala na dynamiczne zmiany bez konieczności przeładowywania strony.
+					</p>
+			</article>
+			
+		</div>
+	</section>
+	
+	<section id="trzecia">
+		<div class="zawartosc">
+		<h3>ONE PAGE</h3>	
+		</div>
+
+	</section>
+	
+	<section id="czwarta">
+		<div class="zawartosc">
+			<!-- SEKCJA CZWARTA -->
+<section id="czwarta">
+    <div class="zawartosc">
+        <!-- KOLUMNA O WEB DESIGNIE -->
+        <div class="kolumna">
+            <h2>Web Design</h2>
+            <p>
+                Web design to proces tworzenia estetycznych, intuicyjnych i funkcjonalnych interfejsów użytkownika dla stron internetowych. Obejmuje on wszystkie aspekty związane z wyglądem i doświadczeniem użytkownika.
+            </p>
+            <p>
+                Dobre projektowanie stron uwzględnia estetykę, użyteczność, responsywność oraz zgodność z najnowszymi trendami. Skuteczny web design przyczynia się do pozytywnego wrażenia użytkownika i sukcesu strony internetowej.
+            </p>
+        </div>
+
+        <!-- KOLUMNA O APLIKACJACH WEBOWYCH -->
+        <div class="kolumna">
+            <h2>Aplikacje Webowe</h2>
+            <p>
+                Aplikacje webowe to interaktywne programy, które użytkownicy uruchamiają w przeglądarkach internetowych. Są one dostępne online i pozwalają na wykonywanie różnorodnych zadań, takich jak edycja dokumentów, komunikacja czy rozrywka.
+            </p>
+            <p>
+                W projektowaniu aplikacji webowych istotne jest zastosowanie nowoczesnych technologii, zapewnienie responsywności oraz bezpieczeństwo danych użytkowników. Innowacyjne podejście do tworzenia aplikacji przyczynia się do ich popularności i użyteczności.
+            </p>
+        </div>
+    </div>
+</section>
+
+			<!--Dwie kolumny i w jednej bardziej złożony układ-->
+		</div>
+	</section>
+	
+	<section id="stopka">
+		<div class="zawartosc">
+			<!--
+			3 kolumny, a w nich:
+			<br>
+			1. dane kontaktowe (adres, kod, miasto), telefon, email
+			
+			<br>
+			2. 3 x hiperłącze do social media
+			<br>
+			3. miejsca na formularz "formularz"
+			-->
+			<div id="daneKontaktowe" class="kolumnyStopka">
+				
+				<ul>
+					<label class="naglowki_stopka"><h1>Dane kontaktowe</h1></label>
+					<hr>
+						<li><img src="ikony/id-card (1).png" class="ikony_dane"> Wiśniewski Mateusz</li>
+						<li><img src="ikony/map.png" class="ikony_dane"> 03-345 Warszawa</li>	
+						<li><img src="ikony/wall-street.png" class="ikony_dane"> ul.chmielna 20/2</li>	
+						<li><img src="ikony/phone-call.png" class="ikony_dane"> +48 324 234 123</li>	
+						<li><img src="ikony/mail.png" class="ikony_dane"> MW@gmail.com</li>
+				</ul>
+			</div>
+			<div id="linkiStopka" class="kolumnyStopka">
+				<ul>
+					<ul>
+					<label class="naglowki_stopka"><h1>Social media</h1></label>
+					<hr>
+					<li><a href="#stopka"><img src="ikony/instagram.png" class="links_footer"></a> </li>
+					<li><a href="#stopka"><img src="ikony/facebook.png" class="links_footer"></a></li>
+					<li><a href="#stopka"><img src="ikony/youtube.png" class="links_footer"></a></li>
+				</ul>
+			</div>
+			<div id="formularzStopka" class="kolumnyStopka">
+				<label class="naglowki_stopka"><h1>Złóż zlecenie:</h1></label>
+
+				<form>
+					<ul>
+						<hr>
+					<li>
+						<label>Imię:</label>
+							<br>
+						<input type="text"
+						placeholder="Wpisz imię...."
+						required></li>
+						
+					<li>
+						<label>E-mail:</label>
+							<br>
+						<input type="email"
+						placeholder="Wpisz e-mail...."
+						required
+						value="@gmail.com">
+					</li>
+					<li>
+						<label>Usługa:</label>
+							<br>
+						<select>
+							<option>Strona internetowa</option>
+							<option>Bazy danych</option>
+							<option>Backend</option>
+						</select><br>
+					</li>
+						
+						<li><label>Opis zlecenia</label><br>
+						<textarea placeholder="Opis zlecenia"
+						required></textarea>
+					</li>
+					<li>
+						<input type="checkbox" id="regulamin"  required>
+						<label  for="regulamin" class="zgody">Zapoznałem się z regulaminem</label><br>
+					</li>
+					<li>
+						<input type="reset" value="WYCZYŚĆ">
+						<input type="submit" value="WYŚLIJ">
+					</li>
+				</ul>
+			</form>
+			</div>
+		</div>
+	</section>
+	
+</body>
+</html>
