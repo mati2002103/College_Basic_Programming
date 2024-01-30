@@ -44,6 +44,7 @@ p{
 	padding:1rem 1.25rem;
 	cursor: pointer;
 	color:white;
+	z-index: 2;
 
 	
 }
@@ -124,9 +125,11 @@ p{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 1;
+	
 	overflow:hidden;
 	color:white;
+	z-index: 3;
+
 }
 .zamknijX{
 	position:absolute;
@@ -142,6 +145,9 @@ p{
 	text-align: center;
 	background-color: #333;
 	border-radius: 5%;
+	z-index: 3;
+
+
 
 }
 .nakladka ol{
@@ -947,7 +953,8 @@ font-family: 'Libre Baskerville', serif;
 	}
 	#druga .zawartosc article p:hover
 	{
-		scale:1.2;
+		scale:1.05;
+		z-index:-10;
 	}
 
 	#szosta
@@ -990,8 +997,8 @@ font-family: 'Libre Baskerville', serif;
 	#trzecia .zawartosc h1{
 		
 		text-align: center;
-		color: #40513B;
-		font-size:7rem;
+		color: #333;
+		font-size:15vw;
 		font-weight: 500;
 		width: 80%;
 		
@@ -1005,7 +1012,7 @@ font-family: 'Libre Baskerville', serif;
 		text-align: center;
 		font-size:3rem;
 		padding:1rem 1rem 2rem 1rem;
-		color:#40513B;
+		color:#333;
 
 		
 	}
@@ -1199,6 +1206,7 @@ font-family: 'Libre Baskerville', serif;
 	#stopka article form input{
 		width: 100%;
 		display: block;
+		margin-bottom: 2rem;
 		
 	}
 	#stopka article form input[type=checkbox]{
